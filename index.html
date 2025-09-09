@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iara & Imanol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Zilla Slab', serif;
+      font-family: 'Roboto Condensed', sans-serif;
       background-color: #F8F9FC;
       color: #111;
       overflow-x: hidden;
@@ -40,6 +40,7 @@
       align-items: flex-start;
       padding: 6vh 5vw;
       gap: 2rem;
+      position: relative;
     }
 
     .col-izquierda {
@@ -47,6 +48,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
+      z-index: 2;
     }
 
     .titulo {
@@ -63,8 +65,8 @@
     .mensaje {
       border-left: 6px solid #BE1823;
       padding-left: 1.5rem;
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      line-height: 1.5;
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
@@ -72,7 +74,7 @@
     }
 
     #contador {
-      font-weight: 600;
+      font-weight: 700;
       color: #BE1823;
     }
 
@@ -81,10 +83,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     .col-derecha img {
-      max-width: 100%;
+      width: 120%;
+      max-width: none;
       height: auto;
       opacity: 0;
       transform: translateY(20px);
@@ -115,6 +120,10 @@
 
       .mensaje {
         margin-top: 1rem;
+      }
+
+      .col-derecha img {
+        width: 100%;
       }
     }
   </style>
