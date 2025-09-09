@@ -38,10 +38,8 @@
     main {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
       width: 100vw;
-      text-align: center;
       padding-top: 6vh;
       margin: 0;
     }
@@ -52,6 +50,7 @@
       color: #BE1823;
       line-height: 1.05;
       margin-bottom: 1rem;
+      text-align: center;
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
@@ -70,17 +69,17 @@
     }
 
     .mensaje {
-      max-width: 800px;
-      text-align: left;
-      margin: 2rem auto;
-      padding: 1.5rem 2rem;
+      width: 60%;
+      align-self: flex-start;
+      margin: 2rem 0 2rem 5vw;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      border-left: 6px solid #BE1823;
       font-family: "Segoe UI", sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       line-height: 1.8;
       color: #111;
-      background-color: rgba(255, 255, 255, 0.75);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
