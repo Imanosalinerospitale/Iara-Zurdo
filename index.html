@@ -11,31 +11,15 @@
       color: #333;
       text-align: center;
 
-      /* 👇 Fondo con tu textura */
+      /* Fondo con tu textura */
       background-image: url("FONDO.jpg");
-      background-size: cover;       /* Ajusta el fondo al tamaño de la pantalla */
-      background-repeat: no-repeat; /* Evita mosaicos */
-      background-attachment: fixed; /* Efecto parallax fijo */
-    }
-
-    header {
-      background: rgba(0,0,0,0.6);  /* fondo semitransparente */
-      color: white;
-      padding: 1.5rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.2rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     nav {
-      background: rgba(0,0,0,0.7);
+      background: #BE1823; /* 👈 tu color personalizado */
       padding: 0.8rem;
     }
 
@@ -44,6 +28,7 @@
       text-decoration: none;
       margin: 0 1rem;
       font-size: 1rem;
+      font-weight: bold;
       transition: color 0.3s;
     }
 
@@ -53,7 +38,7 @@
 
     main {
       padding: 2rem;
-      background: rgba(255,255,255,0.85); /* Caja clara sobre el fondo */
+      background: rgba(255,255,255,0.85);
       margin: 2rem auto;
       width: 80%;
       border-radius: 10px;
@@ -66,11 +51,6 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>PRUEBA</h1>
-    <p>Iara & Imanol</p>
-  </header>
-
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#ubicacion">Ubicación</a>
