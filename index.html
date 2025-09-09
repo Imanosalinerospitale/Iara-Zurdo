@@ -69,6 +69,21 @@
       animation-delay: 0.3s;
     }
 
+    .mensaje {
+      max-width: 800px;
+      text-align: left;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #222;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: aparecer 1s ease-out forwards;
+      animation-delay: 0.6s;
+    }
+
     @keyframes aparecer {
       to {
         opacity: 1;
@@ -90,6 +105,18 @@
       Imanol
     </h1>
     <img src="Ilustración.png" alt="Ilustración de Iara e Imanol">
+
+    <div class="mensaje">
+      <p>
+        Hace: <span id="contador"></span> días que más de 12.952 km nos separan.
+      </p>
+      <p>
+        Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.
+      </p>
+      <p>
+        No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.
+      </p>
+    </div>
   </main>
 
   <section id="ubicacion">
@@ -99,5 +126,14 @@
   <section id="informacion">
     <!-- Contenido de información -->
   </section>
+
+  <script>
+    // Calcula días desde el 21 de diciembre de 2023
+    const fechaInicio = new Date("2023-12-21");
+    const hoy = new Date();
+    const diferencia = hoy - fechaInicio;
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    document.getElementById("contador").textContent = dias;
+  </script>
 </body>
 </html>
