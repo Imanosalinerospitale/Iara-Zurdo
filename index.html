@@ -106,13 +106,41 @@
     .ubicacion-titulo {
       font-family: "Cooper Black", serif;
       font-size: clamp(2rem, 6vw, 5rem);
-      margin: 0;
-      margin-bottom: 2rem;
+      margin: 0 0 2rem 0;
       text-align: center;
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
       animation-delay: 0.2s;
+    }
+
+    .ubicacion-contenido {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: aparecer 1s ease-out forwards;
+      animation-delay: 0.4s;
+    }
+
+    .ubicacion-subtitulo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ubicacion-descripcion {
+      margin-bottom: 1rem;
+    }
+
+    .ubicacion-link a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
     }
 
     @keyframes aparecer {
@@ -179,7 +207,13 @@
 
   <section id="ubicacion">
     <h2 class="ubicacion-titulo">Donde?</h2>
-    <!-- Aquí podemos agregar mapa, dirección, descripción o ilustración -->
+    <div class="ubicacion-contenido">
+      <h3 class="ubicacion-subtitulo">Las Mercedes – Casa de Campo</h3>
+      <p class="ubicacion-descripcion">Las Mercedes 470, X5109 Unquillo, Córdoba</p>
+      <p class="ubicacion-link">
+        <a href="https://share.google/Oi7dGKu2EULUwpNbr" target="_blank">Ubicación</a>
+      </p>
+    </div>
   </section>
 
   <section id="informacion">
@@ -205,4 +239,3 @@
   </script>
 </body>
 </html>
-
