@@ -15,13 +15,13 @@
       color: #333;
     }
 
-    nav {
+    header {
       background: #BE1823;
       padding: 0.8rem;
       text-align: center;
     }
 
-    nav a {
+    header a {
       color: white;
       text-decoration: none;
       margin: 0 1rem;
@@ -30,52 +30,69 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
+    header a:hover {
       color: #ffcc00;
     }
 
-    /* Contenedor con título más arriba */
-    .contenido {
+    main {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start; /* 👈 ahora empieza arriba */
+      justify-content: flex-start;
       align-items: center;
       height: calc(100vh - 60px);
       text-align: center;
-      padding-top: 6vh; /* 👈 separa del menú */
+      padding-top: 6vh;
     }
 
-    /* Estilo del título */
     .titulo {
-      font-size: 10rem;
+      font-size: clamp(3rem, 10vw, 10rem);
       font-family: "Cooper Black", serif;
       color: #BE1823;
       line-height: 1.05;
       margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: aparecer 1s ease-out forwards;
     }
 
-    /* Imagen responsiva */
-    .contenido img {
+    main img {
       max-width: 90%;
       height: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: aparecer 1s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
+  <header>
     <a href="#inicio">Inicio</a>
     <a href="#ubicacion">Ubicación</a>
     <a href="#informacion">Información</a>
-  </nav>
+  </header>
 
-  <div class="contenido">
+  <main id="inicio">
     <h1 class="titulo">
       Iara & <br>
       Imanol
     </h1>
-    <img src="Ilustración.png">
-  </div>
+    <img src="Ilustración.png" alt="Ilustración de Iara e Imanol">
+  </main>
+
+  <section id="ubicacion">
+    <!-- Contenido de ubicación -->
+  </section>
+
+  <section id="informacion">
+    <!-- Contenido de información -->
+  </section>
 </body>
 </html>
-
-
