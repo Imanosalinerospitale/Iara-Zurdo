@@ -16,7 +16,7 @@
     }
 
     nav {
-      background: #BE1823; /* tu color personalizado */
+      background: #BE1823;
       padding: 0.8rem;
       text-align: center;
     }
@@ -34,23 +34,23 @@
       color: #ffcc00;
     }
 
-    /* Contenedor centrado */
+    /* Contenedor con título más arriba */
     .contenido {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start; /* 👈 ahora empieza arriba */
       align-items: center;
       height: calc(100vh - 60px);
       text-align: center;
-      padding: 1rem;
+      padding-top: 12vh; /* 👈 separa del menú */
     }
 
     /* Estilo del título */
     .titulo {
-      font-size: 10rem; /* 👈 tamaño que pediste */
+      font-size: 10rem;
       font-family: "Cooper Black", serif;
       color: #BE1823;
-      line-height: 1.05; /* 👈 reduce espacio entre líneas */
+      line-height: 1.05;
       margin-bottom: 1rem;
     }
 
@@ -73,7 +73,7 @@
       Iara & <br>
       Imanol
     </h1>
-    <img src="Ilustracion.png">
+    <img src="ilustracion.png" alt="Ilustración decorativa">
   </div>
 </body>
 </html>
