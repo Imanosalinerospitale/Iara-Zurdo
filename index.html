@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iara & Imanol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Adabelle Handwriting';
+      src: url('AdabelleHandwriting-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
-      font-family: 'Roboto Condensed', sans-serif;
+      font-family: 'Adabelle Handwriting', cursive;
       background-color: #F8F9FC;
       color: #111;
       overflow-x: hidden;
@@ -27,6 +33,7 @@
       font-size: 1rem;
       font-weight: bold;
       transition: color 0.3s;
+      font-family: 'Adabelle Handwriting', cursive;
     }
 
     header a:hover {
@@ -82,7 +89,7 @@
 
     .nosotros-titulo {
       font-family: "Cooper Black", serif;
-      font-size: clamp(2rem, 6vw, 5rem);
+      font-size: clamp(2rem, 6vw, 4rem);
       margin: 0 0 2rem 0;
       text-align: center;
       opacity: 0;
@@ -95,8 +102,8 @@
       max-width: 800px;
       margin: 0 auto;
       text-align: left;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: 1.2rem;
+      font-family: 'Adabelle Handwriting', cursive;
+      font-size: 1rem;
       line-height: 1.6;
       opacity: 0;
       transform: translateY(20px);
@@ -122,7 +129,7 @@
       }
 
       .nosotros-contenido {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -131,7 +138,9 @@
   <header>
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
-    <a href="#informacion">Información</a>
+    <a href="#detalles">Detalles</a>
+    <a href="#salon">El salón</a>
+    <a href="#registro">Registro</a>
   </header>
 
   <main id="inicio">
@@ -158,8 +167,16 @@
     </div>
   </section>
 
-  <section id="informacion">
-    <!-- Contenido de información -->
+  <section id="detalles">
+    <!-- Contenido de detalles -->
+  </section>
+
+  <section id="salon">
+    <!-- Contenido del salón -->
+  </section>
+
+  <section id="registro">
+    <!-- Contenido de registro -->
   </section>
 </body>
 </html>
