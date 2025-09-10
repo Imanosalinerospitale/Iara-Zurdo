@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara & Imanol</title>
   <style>
     @font-face {
@@ -92,10 +92,7 @@
       font-size: clamp(2rem, 6vw, 4rem);
       margin: 0 0 2rem 0;
       text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
-      animation-delay: 0.2s;
     }
 
     .nosotros-contenido {
@@ -103,12 +100,52 @@
       margin: 0 auto;
       text-align: left;
       font-family: 'Adabelle Handwriting', cursive;
-      font-size: 1rem;
-      line-height: 1.6;
-      opacity: 0;
-      transform: translateY(20px);
+      font-size: 1.2rem;
+      line-height: 1.4;
       animation: aparecer 1s ease-out forwards;
       animation-delay: 0.4s;
+    }
+
+    section#detalles {
+      background-color: #F5B1B8;
+      padding: 6vh 5vw;
+      color: #111;
+    }
+
+    .detalles-titulo {
+      font-family: "Cooper Black", serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #BE1823;
+      animation: aparecer 1s ease-out forwards;
+    }
+
+    .detalles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .detalle-box {
+      background-color: #BE1823;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: 'Adabelle Handwriting', cursive;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      color: white;
+      animation: aparecer 1s ease-out forwards;
+    }
+
+    .detalle-box h3 {
+      font-family: "Cooper Black", serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #F5B1B8;
     }
 
     @keyframes aparecer {
@@ -129,7 +166,15 @@
       }
 
       .nosotros-contenido {
-        font-size: 0.9rem;
+        font-size: 1rem;
+      }
+
+      .detalles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .detalle-box {
+        font-size: 1rem;
       }
     }
   </style>
@@ -149,7 +194,7 @@
       IMANOL
     </h1>
     <div class="gif-fondo">
-      <img src="Comp 1.gif" alt="Animación de fondo">
+      <img src="Comp 1.gif" alt="Animación de fondo" />
     </div>
   </main>
 
@@ -168,15 +213,34 @@
   </section>
 
   <section id="detalles">
-    <!-- Contenido de detalles -->
+    <h2 class="detalles-titulo">Detalles</h2>
+    <div class="detalles-grid">
+      <div class="detalle-box">
+        <h3>CUANDO?</h3>
+        <p>Sábado 27 de Diciembre de 2025 a las 19:30 hs</p>
+      </div>
+      <div class="detalle-box">
+        <h3>DONDE?</h3>
+        <p>Las Mercedes Casa de Campo – Unquillo<br>
+        (Cuenta con su propio estacionamiento para más tranquilidad)</p>
+      </div>
+      <div class="detalle-box">
+        <h3>DRESSCODE?</h3>
+        <p>Como estamos en una casona de campo recomendamos semiformal para asegurar la comodidad de los presentes</p>
+      </div>
+      <div class="detalle-box">
+        <h3>HASTA CUANDO PUEDO CONFIRMAR?</h3>
+        <p>El deadline de confirmación es hasta el 9 de Diciembre como fecha máxima</p>
+      </div>
+    </div>
   </section>
 
   <section id="salon">
-    <!-- Contenido del salón -->
+    <!-- Contenido de El salón -->
   </section>
 
   <section id="registro">
-    <!-- Contenido de registro -->
+    <!-- Contenido de Registro -->
   </section>
 </body>
 </html>
