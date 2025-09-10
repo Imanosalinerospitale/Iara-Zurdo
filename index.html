@@ -36,12 +36,11 @@
     main#inicio {
       position: relative;
       width: 100vw;
-      height: 100vh;
+      height: auto;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       align-items: center;
-      padding-top: 8vh;
+      padding-top: 4vh;
     }
 
     .titulo-central {
@@ -51,6 +50,7 @@
       text-align: center;
       line-height: 1.1;
       margin-bottom: 2rem;
+      margin-top: 2vh;
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
@@ -58,11 +58,20 @@
 
     .gif-fondo {
       width: 100%;
-      height: 60vh;
-      background: url("Comp 1.gif") center center / cover no-repeat;
-      opacity: 0.75;
+      max-height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
       animation: aparecer 1s ease-out forwards;
       animation-delay: 0.3s;
+    }
+
+    .gif-fondo img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      opacity: 0.75;
     }
 
     section#ubicacion {
@@ -121,11 +130,11 @@
     @media (max-width: 768px) {
       .titulo-central {
         font-size: 2rem;
-        padding: 0 1rem;
+        margin-top: 1vh;
       }
 
-      .gif-fondo {
-        height: 40vh;
+      .gif-fondo img {
+        height: auto;
       }
 
       .ubicacion-contenido {
@@ -150,7 +159,9 @@
       IARA &<br>
       IMANOL
     </h1>
-    <div class="gif-fondo"></div>
+    <div class="gif-fondo">
+      <img src="Comp 1.gif" alt="Animación de fondo">
+    </div>
   </main>
 
   <section id="ubicacion">
