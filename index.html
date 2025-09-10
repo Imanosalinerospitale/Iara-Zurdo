@@ -71,16 +71,16 @@
       width: 100%;
       height: auto;
       object-fit: contain;
-      opacity: 0.75;
+      opacity: 1;
     }
 
-    section#ubicacion {
+    section#nosotros {
       background-color: #BE1823;
       padding: 6vh 5vw;
       color: white;
     }
 
-    .ubicacion-titulo {
+    .nosotros-titulo {
       font-family: "Cooper Black", serif;
       font-size: clamp(2rem, 6vw, 5rem);
       margin: 0 0 2rem 0;
@@ -91,7 +91,7 @@
       animation-delay: 0.2s;
     }
 
-    .ubicacion-contenido {
+    .nosotros-contenido {
       max-width: 800px;
       margin: 0 auto;
       text-align: left;
@@ -102,22 +102,6 @@
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
       animation-delay: 0.4s;
-    }
-
-    .ubicacion-subtitulo {
-      font-weight: 700;
-      font-size: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .ubicacion-descripcion {
-      margin-bottom: 1rem;
-    }
-
-    .ubicacion-link a {
-      color: white;
-      text-decoration: underline;
-      font-weight: bold;
     }
 
     @keyframes aparecer {
@@ -137,12 +121,8 @@
         height: auto;
       }
 
-      .ubicacion-contenido {
+      .nosotros-contenido {
         font-size: 1rem;
-      }
-
-      .ubicacion-subtitulo {
-        font-size: 1.2rem;
       }
     }
   </style>
@@ -150,7 +130,7 @@
 <body>
   <header>
     <a href="#inicio">Inicio</a>
-    <a href="#ubicacion">Ubicación</a>
+    <a href="#nosotros">Nosotros</a>
     <a href="#informacion">Información</a>
   </header>
 
@@ -164,13 +144,16 @@
     </div>
   </main>
 
-  <section id="ubicacion">
-    <h2 class="ubicacion-titulo">Donde?</h2>
-    <div class="ubicacion-contenido">
-      <h3 class="ubicacion-subtitulo">Las Mercedes – Casa de Campo</h3>
-      <p class="ubicacion-descripcion">Las Mercedes 470, X5109 Unquillo, Córdoba</p>
-      <p class="ubicacion-link">
-        <a href="https://share.google/Oi7dGKu2EULUwpNbr" target="_blank">Ubicación</a>
+  <section id="nosotros">
+    <h2 class="nosotros-titulo">Nosotros</h2>
+    <div class="nosotros-contenido">
+      <p>
+        Nuestra historia no es una de cuentos. Lo nuestro siempre fue más lo de las palabras afiladas que lo del amor a primera vista.
+        Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.
+        Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.
+        Decidimos casarnos, no por protocolo, ni por presión.
+        Porque queremos vivir juntos, donde sea.
+        Y porque si la vida ya es un delirio, mejor armar una fiesta.
       </p>
     </div>
   </section>
