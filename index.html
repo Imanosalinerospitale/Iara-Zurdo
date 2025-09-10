@@ -98,7 +98,7 @@
     .nosotros-contenido {
       max-width: 800px;
       margin: 0 auto;
-      text-align: left;
+      text-align: center;
       font-family: 'Adabelle Handwriting', cursive;
       font-size: 1.2rem;
       line-height: 1.4;
@@ -109,43 +109,39 @@
     section#detalles {
       background-color: #F5B1B8;
       padding: 6vh 5vw;
-      color: #111;
+      color: white;
+      text-align: center;
     }
 
     .detalles-titulo {
       font-family: "Cooper Black", serif;
       font-size: clamp(2rem, 6vw, 4rem);
-      text-align: center;
-      margin-bottom: 3rem;
       color: #BE1823;
+      margin-bottom: 3rem;
       animation: aparecer 1s ease-out forwards;
     }
 
-    .detalles-grid {
+    .detalles-bloques {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
+      gap: 4rem;
       max-width: 1000px;
       margin: 0 auto;
     }
 
-    .detalle-box {
-      background-color: #BE1823;
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .bloque-detalle h3 {
+      font-family: "Cooper Black", serif;
+      font-size: 1.5rem;
+      color: #BE1823;
+      margin-bottom: 1rem;
+    }
+
+    .bloque-detalle p {
       font-family: 'Adabelle Handwriting', cursive;
       font-size: 1.2rem;
       line-height: 1.4;
       color: white;
-      animation: aparecer 1s ease-out forwards;
-    }
-
-    .detalle-box h3 {
-      font-family: "Cooper Black", serif;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: #F5B1B8;
+      margin: 0;
     }
 
     @keyframes aparecer {
@@ -169,11 +165,12 @@
         font-size: 1rem;
       }
 
-      .detalles-grid {
+      .detalles-bloques {
         grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
-      .detalle-box {
+      .bloque-detalle p {
         font-size: 1rem;
       }
     }
@@ -202,11 +199,11 @@
     <h2 class="nosotros-titulo">Nosotros</h2>
     <div class="nosotros-contenido">
       <p>
-        Nuestra historia no es una de cuentos. Lo nuestro siempre fue más lo de las palabras afiladas que lo del amor a primera vista.
-        Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.
-        Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.
-        Decidimos casarnos, no por protocolo, ni por presión.
-        Porque queremos vivir juntos, donde sea.
+        Nuestra historia no es una de cuentos. Lo nuestro siempre fue más lo de las palabras afiladas que lo del amor a primera vista.<br>
+        Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
+        Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
+        Decidimos casarnos, no por protocolo, ni por presión.<br>
+        Porque queremos vivir juntos, donde sea.<br>
         Y porque si la vida ya es un delirio, mejor armar una fiesta.
       </p>
     </div>
@@ -214,21 +211,21 @@
 
   <section id="detalles">
     <h2 class="detalles-titulo">Detalles</h2>
-    <div class="detalles-grid">
-      <div class="detalle-box">
+    <div class="detalles-bloques">
+      <div class="bloque-detalle">
         <h3>CUANDO?</h3>
         <p>Sábado 27 de Diciembre de 2025 a las 19:30 hs</p>
       </div>
-      <div class="detalle-box">
+      <div class="bloque-detalle">
         <h3>DONDE?</h3>
         <p>Las Mercedes Casa de Campo – Unquillo<br>
         (Cuenta con su propio estacionamiento para más tranquilidad)</p>
       </div>
-      <div class="detalle-box">
+      <div class="bloque-detalle">
         <h3>DRESSCODE?</h3>
         <p>Como estamos en una casona de campo recomendamos semiformal para asegurar la comodidad de los presentes</p>
       </div>
-      <div class="detalle-box">
+      <div class="bloque-detalle">
         <h3>HASTA CUANDO PUEDO CONFIRMAR?</h3>
         <p>El deadline de confirmación es hasta el 9 de Diciembre como fecha máxima</p>
       </div>
