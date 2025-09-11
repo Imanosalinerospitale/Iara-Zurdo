@@ -11,14 +11,16 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #F8F9FC;
       color: #111;
+      font-size: 16px;
       overflow-x: hidden;
-      font-size: 18px;
     }
+
     header {
       background: #BE1823;
       padding: 0.8rem;
       text-align: center;
     }
+
     header a {
       color: white;
       text-decoration: none;
@@ -27,21 +29,21 @@
       font-weight: bold;
       transition: color 0.3s ease;
     }
+
     header a:hover {
       color: #F5B1B8;
     }
+
     main#inicio {
-      position: relative;
-      width: 100vw;
-      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding-top: 4vh;
     }
+
     .titulo-central {
       font-family: "Cooper Black", serif;
-      font-size: clamp(2rem, 6vw, 6rem);
+      font-size: clamp(2rem, 8vw, 6rem);
       color: #BE1823;
       text-align: center;
       line-height: 0.75;
@@ -51,6 +53,7 @@
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
     }
+
     .gif-fondo {
       width: 100%;
       max-height: 80vh;
@@ -61,92 +64,116 @@
       animation: aparecer 1s ease-out forwards;
       animation-delay: 0.3s;
     }
+
     .gif-fondo img {
       width: 100%;
       height: auto;
       object-fit: contain;
-      opacity: 1;
     }
+
     section {
       padding: 6vh 5vw;
+      max-width: 1000px;
+      margin: 0 auto;
       text-align: center;
     }
-    section#nosotros {
-      background-color: #BE1823;
-      color: white;
-    }
-    section#detalles {
-      background-color: #F5B1B8;
-      color: white;
-    }
-    section#salon {
-      background-color: #fff;
-      color: #111;
-    }
-    section#registro {
-      background-color: #BE1823;
-      color: white;
-    }
+
     h2 {
       font-family: "Cooper Black", serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
     }
+
     .nosotros-contenido,
     .registro-contenido {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
       line-height: 1.6;
     }
+
+    section#nosotros {
+      background-color: #BE1823;
+      color: white;
+    }
+
+    section#detalles {
+      background-color: #F5B1B8;
+      color: white;
+    }
+
     .detalles-bloques {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
+
     .bloque-detalle h3 {
       font-family: "Cooper Black", serif;
       font-size: 1.5rem;
       color: #BE1823;
       margin-bottom: 1rem;
     }
+
     .bloque-detalle p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.4;
       margin: 0;
     }
+
+    section#salon {
+      background-color: #fff;
+      color: #111;
+    }
+
+    section#registro {
+      background-color: #BE1823;
+      color: white;
+    }
+
     .registro-contenido img {
       max-width: 200px;
       width: 100%;
       height: auto;
       margin: 2rem 0;
     }
+
+    form input,
+    form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+
+    form button {
+      background-color: white;
+      color: #BE1823;
+      font-weight: bold;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #confirmacion {
+      display: none;
+      background-color: white;
+      padding: 4vh 0;
+    }
+
+    #confirmacion img {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
     @keyframes aparecer {
       to {
         opacity: 1;
         transform: translateY(0);
-      }
-    }
-    @media (max-width: 768px) {
-      .titulo-central {
-        font-size: 2rem;
-        margin-top: 1vh;
-      }
-      .gif-fondo img {
-        height: auto;
-      }
-      .nosotros-contenido,
-      .registro-contenido {
-        font-size: 1rem;
-      }
-      .detalles-bloques {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .bloque-detalle p {
-        font-size: 1rem;
       }
     }
   </style>
@@ -202,30 +229,27 @@
     </div>
   </section>
 
- <section id="salon" style="background-color: #fff; padding: 6vh 5vw; text-align: center;">
-  <h2 style="font-family: 'Cooper Black', serif; font-size: clamp(2rem, 6vw, 4rem); color: #BE1823; margin-bottom: 2rem;">
-    El Salón
-  </h2>
-  <p style="max-width: 800px; margin: 0 auto; font-family: 'Montserrat', sans-serif; font-size: 1.2rem; line-height: 1.5; color: #111;">
-    Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
-  </p>
-  <div style="margin-top: 3rem;">
-    <iframe
-      src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
-   <section id="registro">
-    <h2>Registro</h2>
-    <p style="font-size: 1.2rem; line-height: 1.6;">
-      Hace <span id="contador"></span> que más de 12.952 km nos separan.
+  <section id="salon">
+    <h2 style="color: #BE1823;">El Salón</h2>
+    <p style="max-width: 800px; margin: 0 auto;">
+      Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
     </p>
+    <div style="margin-top: 3rem;">
+      <iframe
+        src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="registro">
+    <h2>Registro</h2>
+    <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
     <div class="registro-contenido">
       <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
       <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
@@ -242,35 +266,31 @@
 
       <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
 
-      <p style="margin-top: 2rem;">Gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
+      <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="dni">DNI:</label><br>
+        <input type="text" id="dni" name="dni" required><br>
+
+        <label for="dieta">Dieta:</label><br>
+        <select id="dieta" name="dieta" required>
+          <option value="">Seleccionar</option>
+          <option value="Común">Común</option>
+          <option value="Vegetarianx">Vegetarianx</option>
+          <option value="Veganx">Veganx</option>
+          <option value="Celiacx">Celiacx</option>
+        </select><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
+        <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+      </div>
     </div>
-<form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" style="margin-top: 3rem;" onsubmit="mostrarConfirmacion(event)">
-  <label for="nombre">Nombre completo:</label><br>
-  <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+  </section>
 
-  <label for="dni">DNI:</label><br>
-  <input type="text" id="dni" name="dni" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-
-  <label for="dieta">Dieta:</label><br>
-  <select id="dieta" name="dieta" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
-    <option value="">Seleccionar</option>
-    <option value="Común">Común</option>
-    <option value="Vegetarianx">Vegetarianx</option>
-    <option value="Veganx">Veganx</option>
-    <option value="Celiacx">Celiacx</option>
-  </select><br>
-
-  <button type="submit" style="background-color: white; color: #BE1823; font-weight: bold; padding: 0.6rem 1.2rem; border: none; cursor: pointer;">
-    Enviar
-  </button>
-</form>
-
-<!-- Contenedor de confirmación visual -->
-<div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
-  <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
-</div>
-
-  <!-- Script para contador dinámico -->
   <script>
     function actualizarContador() {
       const inicio = new Date("2024-12-21T00:00:00");
@@ -286,38 +306,29 @@
 
     actualizarContador();
     setInterval(actualizarContador, 60000);
+
+    function mostrarConfirmacion(event) {
+      event.preventDefault();
+
+      const form = document.getElementById("registro-form");
+      const confirmacion = document.getElementById("confirmacion");
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData
+      }).then(() => {
+        form.style.display = "none";
+        confirmacion.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "#inicio";
+        }, 10000);
+      }).catch(error => {
+        alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
+        console.error(error);
+      });
+    }
   </script>
-
-<script>
-  function mostrarConfirmacion(event) {
-    event.preventDefault(); // Evita el envío inmediato
-
-    const form = document.getElementById("registro-form");
-    const confirmacion = document.getElementById("confirmacion");
-
-    // Enviar los datos manualmente
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: formData
-    }).then(() => {
-      form.style.display = "none";
-      confirmacion.style.display = "block";
-
-      // Redirigir después de 10 segundos
-      setTimeout(() => {
-        window.location.href = "#inicio"; // Cambiá esto si querés ir a otra sección
-      }, 10000);
-    }).catch(error => {
-      alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
-      console.error(error);
-    });
-  }
-</script>
-
 </body>
 </html>
-
-
-
-
