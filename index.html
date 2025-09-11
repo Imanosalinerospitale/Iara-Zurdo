@@ -131,8 +131,15 @@
 
     .detalles-bloques {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto;
       gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .detalles-bloques {
+        grid-template-columns: 1fr;
+      }
     }
 
     .bloque-detalle h3 {
@@ -180,6 +187,24 @@
       height: auto;
       margin: 0 auto;
       display: block;
+    }
+
+    footer {
+      background-color: #F5B1B8;
+      color: white;
+      text-align: center;
+      padding: 6vh 5vw;
+    }
+
+    footer h2 {
+      font-family: 'Cooper Black', serif;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: underline;
     }
 
     @keyframes aparecer {
@@ -247,7 +272,7 @@
 
   <section id="salon">
     <div class="contenido">
-      <h2>El Salón</h2>
+           <h2>El Salón</h2>
       <p>
         Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
       </p>
@@ -273,122 +298,110 @@
         <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
         <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
 
-                     <p><strong>Mayores (por persona):</strong> $65.000</p>
-      <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
-      <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
+        <p><strong>Mayores (por persona):</strong> $65.000</p>
+        <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
+        <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
 
-      <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
+        <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
 
-      <div style="margin: 2rem 0;">
-        <img src="qr.png" alt="Código QR para transferencia" />
-      </div>
+        <div style="margin: 2rem 0;">
+          <img src="qr.png" alt="Código QR para transferencia" />
+        </div>
 
-      <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
+        <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
 
-      <!-- Formulario de registro -->
-      <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
-        <label for="nombre">Nombre completo:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br>
+        <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br>
 
-        <label for="dni">DNI:</label><br>
-        <input type="text" id="dni" name="dni" required><br>
+          <label for="dni">DNI:</label><br>
+          <input type="text" id="dni" name="dni" required><br>
 
-        <label for="dieta">Dieta:</label><br>
-        <select id="dieta" name="dieta" required>
-          <option value="">Seleccionar</option>
-          <option value="Común">Común</option>
-          <option value="Vegetarianx">Vegetarianx</option>
-          <option value="Veganx">Veganx</option>
-          <option value="Celiacx">Celiacx</option>
-        </select><br>
+          <label for="dieta">Dieta:</label><br>
+          <select id="dieta" name="dieta" required>
+            <option value="">Seleccionar</option>
+            <option value="Común">Común</option>
+            <option value="Vegetarianx">Vegetarianx</option>
+            <option value="Veganx">Veganx</option>
+            <option value="Celiacx">Celiacx</option>
+          </select><br>
 
-        <button type="submit">Enviar</button>
-      </form>
+          <button type="submit">Enviar</button>
+        </form>
 
-      <!-- Confirmación visual -->
-      <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
-        <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+        <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
+          <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Scripts -->
-<script>
-  // Contador dinámico
-  function actualizarContador() {
-    const inicio = new Date("2024-12-21T00:00:00");
-    const ahora = new Date();
-    const diferencia = ahora - inicio;
+  <footer>
+    <h2>Dudas?</h2>
+    <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+      Si te quedaste con alguna duda o necesitás ayuda para completar los datos del registro, ¡escribinos!
+    </p>
+    <p style="font-size: 1rem; margin-bottom: 0.5rem;">
+      <strong>Iara:</strong>
+      <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
+        Whatsapp!
+      </a>
+    </p>
+    <p style="font-size: 1rem;">
+      <strong>Imanol:</strong>
+      <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
+        Whatsapp!
+      </a>
+    </p>
+  </footer>
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+  <script>
+    function actualizarContador() {
+      const inicio = new Date("2024-12-21T00:00:00");
+      const ahora = new Date();
+      const diferencia = ahora - inicio;
 
-    document.getElementById("contador").textContent = `${dias} días, ${horas} horas y ${minutos} minutos`;
-  }
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
 
-  actualizarContador();
-  setInterval(actualizarContador, 60000);
-
-  // Confirmación visual y redirección
-  function mostrarConfirmacion(event) {
-    event.preventDefault();
-
-    const form = document.getElementById("registro-form");
-    const confirmacion = document.getElementById("confirmacion");
-
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: "POST",
-      body: formData
-    }).then(() => {
-      form.style.display = "none";
-      confirmacion.style.display = "block";
-
-      setTimeout(() => {
-        window.location.href = "#inicio";
-      }, 10000);
-    }).catch(error => {
-      alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
-      console.error(error);
-    });
-  }
-
-  // Efecto scroll en header
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    if (window.scrollY > 20) {
-      header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
-    } else {
-      header.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+      document.getElementById("contador").textContent = `${dias} días, ${horas} horas y ${minutos} minutos`;
     }
-  });
-</script>
-</body>
-<!-- Footer -->
-<footer style="background-color: #F5B1B8; color: white; text-align: center; padding: 6vh 5vw;">
-  <h2 style="font-family: 'Cooper Black', serif; font-size: clamp(1.5rem, 5vw, 2.5rem); margin-bottom: 1rem;">
-    Dudas?
-  </h2>
-  <p style="font-size: 1rem; margin-bottom: 1.5rem;">
-    Si te quedaste con alguna duda o necesitás ayuda para completar los datos del registro, ¡escribinos!
-  </p>
-  <p style="font-size: 1rem; margin-bottom: 0.5rem;">
-    <strong>Iara:</strong>
-    <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank" style="color: white; text-decoration: underline;">
-      Whatsapp!
-    </a>
-  </p>
-  <p style="font-size: 1rem;">
-    <strong>Imanol:</strong>
-    <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank" style="color: white; text-decoration: underline;">
-      Whatsapp!
-    </a>
-  </p>
-</footer>
 
-<!-- Cierre del documento -->
+    actualizarContador();
+    setInterval(actualizarContador, 60000);
+
+    function mostrarConfirmacion(event) {
+      event.preventDefault();
+
+      const form = document.getElementById("registro-form");
+      const confirmacion = document.getElementById("confirmacion");
+
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData
+      }).then(() => {
+        form.style.display = "none";
+        confirmacion.style.display = "block";
+
+        setTimeout(() => {
+          window.location.href = "#inicio";
+        }, 10000);
+      }).catch(error => {
+        alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
+        console.error(error);
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 20) {
+        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
+      } else {
+        header.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
+      }
+    });
+  </script>
 </body>
 </html>
-
