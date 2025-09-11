@@ -288,8 +288,36 @@
     setInterval(actualizarContador, 60000);
   </script>
 
+<script>
+  function mostrarConfirmacion(event) {
+    event.preventDefault(); // Evita el envío inmediato
+
+    const form = document.getElementById("registro-form");
+    const confirmacion = document.getElementById("confirmacion");
+
+    // Enviar los datos manualmente
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: formData
+    }).then(() => {
+      form.style.display = "none";
+      confirmacion.style.display = "block";
+
+      // Redirigir después de 10 segundos
+      setTimeout(() => {
+        window.location.href = "#inicio"; // Cambiá esto si querés ir a otra sección
+      }, 10000);
+    }).catch(error => {
+      alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
+      console.error(error);
+    });
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
