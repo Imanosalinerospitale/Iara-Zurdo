@@ -219,7 +219,7 @@
       </iframe>
     </div>
   </section>
-  <section id="registro">
+   <section id="registro">
     <h2>Registro</h2>
     <p style="font-size: 1.2rem; line-height: 1.6;">
       Hace <span id="contador"></span> que más de 12.952 km nos separan.
@@ -227,4 +227,40 @@
     <div class="registro-contenido">
       <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
       <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
-      <p><strong>Mayores (por persona):</strong>
+
+      <p><strong>Mayores (por persona):</strong> $65.000</p>
+      <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
+      <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
+
+      <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
+
+      <div style="margin: 2rem 0;">
+        <img src="qr.png" alt="Código QR para transferencia" />
+      </div>
+
+      <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
+
+      <p style="margin-top: 2rem;">Gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
+    </div>
+  </section>
+
+  <!-- Script para contador dinámico -->
+  <script>
+    function actualizarContador() {
+      const inicio = new Date("2024-12-21T00:00:00");
+      const ahora = new Date();
+      const diferencia = ahora - inicio;
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+
+      document.getElementById("contador").textContent = `${dias} días, ${horas} horas y ${minutos} minutos`;
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 60000);
+  </script>
+
+</body>
+</html>
