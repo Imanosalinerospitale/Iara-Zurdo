@@ -4,8 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara & Imanol</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Fuente Cooper Black desde tu servidor -->
   <style>
+    @font-face {
+      font-family: 'Cooper Black';
+      src: url('CooperBlack.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
@@ -42,7 +50,7 @@
     }
 
     .titulo-central {
-      font-family: "Cooper Black", serif;
+      font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 8vw, 6rem);
       color: #BE1823;
       text-align: center;
@@ -79,15 +87,10 @@
     }
 
     h2 {
-      font-family: "Cooper Black", serif;
+      font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
-    }
-
-    .nosotros-contenido,
-    .registro-contenido {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.6;
+      color: #BE1823;
     }
 
     section#nosotros {
@@ -95,9 +98,19 @@
       color: white;
     }
 
+    section#nosotros h2 {
+      color: white;
+    }
+
     section#detalles {
       background-color: #F5B1B8;
       color: white;
+    }
+
+    .nosotros-contenido,
+    .registro-contenido {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      line-height: 1.6;
     }
 
     .detalles-bloques {
@@ -107,7 +120,7 @@
     }
 
     .bloque-detalle h3 {
-      font-family: "Cooper Black", serif;
+      font-family: 'Cooper Black', serif;
       font-size: 1.5rem;
       color: #BE1823;
       margin-bottom: 1rem;
@@ -230,8 +243,8 @@
   </section>
 
   <section id="salon">
-    <h2 style="color: #BE1823;">El Salón</h2>
-    <p style="max-width: 800px; margin: 0 auto;">
+    <h2>El Salón</h2>
+    <p>
       Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
     </p>
     <div style="margin-top: 3rem;">
@@ -252,7 +265,7 @@
     <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
     <div class="registro-contenido">
       <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
-      <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
+        <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
 
       <p><strong>Mayores (por persona):</strong> $65.000</p>
       <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
@@ -266,6 +279,7 @@
 
       <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
 
+      <!-- Formulario de registro -->
       <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
         <label for="nombre">Nombre completo:</label><br>
         <input type="text" id="nombre" name="nombre" required><br>
@@ -285,13 +299,16 @@
         <button type="submit">Enviar</button>
       </form>
 
+      <!-- Confirmación visual -->
       <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
         <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
       </div>
     </div>
   </section>
 
+  <!-- Scripts -->
   <script>
+    // Contador dinámico
     function actualizarContador() {
       const inicio = new Date("2024-12-21T00:00:00");
       const ahora = new Date();
@@ -307,6 +324,7 @@
     actualizarContador();
     setInterval(actualizarContador, 60000);
 
+    // Confirmación visual y redirección
     function mostrarConfirmacion(event) {
       event.preventDefault();
 
