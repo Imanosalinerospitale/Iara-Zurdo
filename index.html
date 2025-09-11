@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara & Imanol</title>
 
-  <!-- Fuente Cooper Black desde tu servidor -->
   <style>
     @font-face {
       font-family: 'Cooper Black';
@@ -42,11 +41,11 @@
       color: #F5B1B8;
     }
 
-    main#inicio {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 4vh;
+    .contenido {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 6vh 5vw;
+      text-align: center;
     }
 
     .titulo-central {
@@ -79,18 +78,10 @@
       object-fit: contain;
     }
 
-    section {
-      padding: 6vh 5vw;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
     h2 {
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
-      color: #BE1823;
     }
 
     section#nosotros {
@@ -98,12 +89,22 @@
       color: white;
     }
 
-    section#nosotros h2 {
+    section#detalles {
+      background-color: #F5B1B8;
       color: white;
     }
 
-    section#detalles {
-      background-color: #F5B1B8;
+    section#salon {
+      background-color: #fff;
+      color: #111;
+    }
+
+    section#registro {
+      background-color: #BE1823;
+      color: white;
+    }
+
+    section#registro h2 {
       color: white;
     }
 
@@ -130,23 +131,6 @@
       font-size: 1rem;
       line-height: 1.4;
       margin: 0;
-    }
-
-    section#salon {
-      background-color: #fff;
-      color: #111;
-    }
-
-    section#registro {
-      background-color: #BE1823;
-      color: white;
-    }
-
-    .registro-contenido img {
-      max-width: 200px;
-      width: 100%;
-      height: auto;
-      margin: 2rem 0;
     }
 
     form input,
@@ -208,100 +192,108 @@
   </main>
 
   <section id="nosotros">
-    <h2>Nuestra historia</h2>
-    <div class="nosotros-contenido">
-      <p>
-        Nuestra historia no es una de cuentos. Lo nuestro siempre fue más lo de las palabras afiladas que lo del amor a primera vista.<br>
-        Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
-        Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
-        Decidimos casarnos, no por protocolo, sino porque queremos vivir juntos, donde sea.<br>
-        Y porque si la vida ya es un delirio, mejor armar una fiesta.
-      </p>
+    <div class="contenido">
+      <h2>Nuestra historia</h2>
+      <div class="nosotros-contenido">
+        <p>
+          Nuestra historia no es una de cuentos. Lo nuestro siempre fue más lo de las palabras afiladas que lo del amor a primera vista.<br>
+          Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
+          Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
+          Decidimos casarnos, no por protocolo, sino porque queremos vivir juntos, donde sea.<br>
+          Y porque si la vida ya es un delirio, mejor armar una fiesta.
+        </p>
+      </div>
     </div>
   </section>
 
   <section id="detalles">
-    <h2>Detalles</h2>
-    <div class="detalles-bloques">
-      <div class="bloque-detalle">
-        <h3>CUANDO?</h3>
-        <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
-      </div>
-      <div class="bloque-detalle">
-        <h3>DÓNDE?</h3>
-        <p>Las Mercedes – Casa de Campo,<br>Unquillo, Córdoba.<br>(Cuenta con su propio estacionamiento para más tranquilidad)</p>
-      </div>
-      <div class="bloque-detalle">
-        <h3>DRESSCODE?</h3>
-        <p>Como estamos en una casona de campo recomendamos semiformal para asegurar la comodidad de los presentes.</p>
-      </div>
-      <div class="bloque-detalle">
-        <h3>RSVP</h3>
-        <p>Por favor, confirmar asistencia antes del 9 de Diciembre.</p>
+    <div class="contenido">
+      <h2>Detalles</h2>
+      <div class="detalles-bloques">
+        <div class="bloque-detalle">
+          <h3>CUANDO?</h3>
+          <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
+        </div>
+        <div class="bloque-detalle">
+          <h3>DÓNDE?</h3>
+          <p>Las Mercedes – Casa de Campo,<br>Unquillo, Córdoba.<br>(Cuenta con su propio estacionamiento para más tranquilidad)</p>
+        </div>
+        <div class="bloque-detalle">
+          <h3>DRESSCODE?</h3>
+          <p>Como estamos en una casona de campo recomendamos semiformal para asegurar la comodidad de los presentes.</p>
+        </div>
+        <div class="bloque-detalle">
+          <h3>RSVP</h3>
+          <p>Por favor, confirmar asistencia antes del 9 de Diciembre.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="salon">
-    <h2>El Salón</h2>
-    <p>
-      Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
-    </p>
-    <div style="margin-top: 3rem;">
-      <iframe
-        src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="contenido">
+      <h2>El Salón</h2>
+      <p>
+        Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto para compartir este momento con ustedes.
+      </p>
+      <div style="margin-top: 3rem;">
+        <iframe
+          src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </section>
 
   <section id="registro">
-    <h2>Registro</h2>
-    <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
-    <div class="registro-contenido">
-      <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
+    <div class="contenido">
+      <h2>Registro</h2>
+      <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
+      <div class="registro-contenido">
+        <p>Por eso, para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
         <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
 
-      <p><strong>Mayores (por persona):</strong> $65.000</p>
-      <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
-      <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
+                <p><strong>Mayores (por persona):</strong> $65.000</p>
+        <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
+        <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
 
-      <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
+        <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
 
-      <div style="margin: 2rem 0;">
-        <img src="qr.png" alt="Código QR para transferencia" />
-      </div>
+        <div style="margin: 2rem 0;">
+          <img src="qr.png" alt="Código QR para transferencia" />
+        </div>
 
-      <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
+        <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
 
-      <!-- Formulario de registro -->
-      <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
-        <label for="nombre">Nombre completo:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br>
+        <!-- Formulario de registro -->
+        <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br>
 
-        <label for="dni">DNI:</label><br>
-        <input type="text" id="dni" name="dni" required><br>
+          <label for="dni">DNI:</label><br>
+          <input type="text" id="dni" name="dni" required><br>
 
-        <label for="dieta">Dieta:</label><br>
-        <select id="dieta" name="dieta" required>
-          <option value="">Seleccionar</option>
-          <option value="Común">Común</option>
-          <option value="Vegetarianx">Vegetarianx</option>
-          <option value="Veganx">Veganx</option>
-          <option value="Celiacx">Celiacx</option>
-        </select><br>
+          <label for="dieta">Dieta:</label><br>
+          <select id="dieta" name="dieta" required>
+            <option value="">Seleccionar</option>
+            <option value="Común">Común</option>
+            <option value="Vegetarianx">Vegetarianx</option>
+            <option value="Veganx">Veganx</option>
+            <option value="Celiacx">Celiacx</option>
+          </select><br>
 
-        <button type="submit">Enviar</button>
-      </form>
+          <button type="submit">Enviar</button>
+        </form>
 
-      <!-- Confirmación visual -->
-      <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
-        <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+        <!-- Confirmación visual -->
+        <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
+          <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+        </div>
       </div>
     </div>
   </section>
