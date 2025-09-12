@@ -101,8 +101,7 @@
     h2 {
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
-      margin-bottom: 3rem;
-      margin-top: 0.5rem;
+      margin-bottom: 2rem;
     }
 
     /* SECCIÓN NOSOTROS */
@@ -129,33 +128,48 @@
       display: block;
     }
 
-    /* SECCIÓN INFORMACIÓN */
-    section#informacion {
-      background-color: #F5B1B8;
-      color: white;
-    }
-
-    .subseccion {
-      margin-bottom: 4rem;
+    /* NUEVAS SECCIONES DETALLES */
+    section {
+      padding: 6vh 5vw;
       text-align: center;
     }
 
-    .subseccion h3 {
-      font-family: 'Cooper Black', serif;
-      font-size: clamp(1.5rem, 4vw, 2.5rem);
+    .detalles-titulo {
+      font-family: "Cooper Black", serif;
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin-bottom: 2rem;
+    }
+
+    #cuando {
+      background-color: #F5B1B8; 
+      color: black;
+    }
+
+    #donde {
+      background-color: #fff; 
+      color: #111;
+    }
+
+    #rsvp {
+      background-color: #BE1823; 
+      color: #111;
+    }
+
+    #dudas {
+      background-color: #BE1823;
+      color: white;
+    }
+
+    /* SECCIÓN SALÓN */
+    section#salon {
+      background-color: #fff;
+      color: #111;
+    }
+
+    section#salon h2 {
       color: #BE1823;
-      margin-bottom: 1rem;
     }
 
-    .subseccion p {
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      line-height: 1.6;
-      text-align: justify;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-
-    /* CONTENIDO SALÓN (para Dónde?) */
     .salon-contenido {
       display: flex;
       align-items: flex-start;
@@ -171,7 +185,7 @@
     }
 
     .salon-mapa {
-      flex: 0 0 50%;
+      flex: 0 0 55%;
     }
 
     .salon-mapa iframe {
@@ -189,7 +203,7 @@
       }
     }
 
-    /* FORMULARIO */
+    /* SECCIÓN REGISTRO (se mantiene como formulario en RSVP) */
     form input,
     form select {
       width: 100%;
@@ -226,7 +240,7 @@
 
     /* FOOTER */
     footer {
-      background-color: #F5B1B8;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 6vh 5vw;
@@ -257,7 +271,10 @@
   <header>
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
-    <a href="#cuando">Información</a>
+    <a href="#cuando">Cuándo</a>
+    <a href="#donde">Dónde</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#dudas">Dudas</a>
   </header>
 
   <!-- INICIO -->
@@ -272,16 +289,14 @@
   <section id="nosotros">
     <div class="contenido">
       <h2>Nuestra historia</h2>
-      <div class="nosotros-contenido">
-        <p>
-          Nuestra historia no es una de cuentos. Lo nuestro siempre fue más de las palabras afiladas que lo del amor a primera vista.<br>
-          Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
-          Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
-          Decidimos casarnos, no por protocolo, sino porque queremos vivir juntos, donde sea.<br>
-          Y porque si la vida ya es un delirio, mejor armar una fiesta.<br>
-          ¿Y qué mejor que hacerlo con las personas que queremos?
-        </p>
-      </div>
+      <p>
+        Nuestra historia no es una de cuentos. Lo nuestro siempre fue más de las palabras afiladas que lo del amor a primera vista.<br>
+        Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
+        Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
+        Decidimos casarnos, no por protocolo, sino porque queremos vivir juntos, donde sea.<br>
+        Y porque si la vida ya es un delirio, mejor armar una fiesta.<br>
+        ¿Y qué mejor que hacerlo con las personas que queremos?
+      </p>
     </div>
   </section>
   
@@ -290,105 +305,77 @@
     <img src="fotofilm.png" alt="Imagen separadora">
   </div>
 
-  <!-- SECCIÓN INFORMACIÓN -->
-  <section id="informacion">
-    <div class="contenido">
+  <!-- CUÁNDO -->
+  <section id="cuando">
+    <h2 class="detalles-titulo">¿Cuándo?</h2>
+    <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
+  </section>
 
-      <!-- SUBSECCIÓN CUÁNDO -->
-      <div id="cuando" class="subseccion">
-        <h3>Cuándo?</h3>
-        <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
+  <!-- DÓNDE -->
+  <section id="donde">
+    <h2 class="detalles-titulo">¿Dónde?</h2>
+    <div class="contenido salon-contenido">
+      <div class="salon-texto">
+        <p>
+          Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. 
+          Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
+          para compartir este momento con ustedes.
+        </p>
       </div>
-
-      <!-- SUBSECCIÓN DÓNDE -->
-      <div id="donde" class="subseccion">
-        <h3>Dónde?</h3>
-        <div class="salon-contenido">
-          <div class="salon-texto">
-            <p>
-              Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. 
-              Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
-              para compartir este momento con ustedes.
-            </p>
-          </div>
-          <div class="salon-mapa">
-            <iframe
-              src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-              width="100%"
-              height="400"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-        </div>
+      <div class="salon-mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-
-      <!-- SUBSECCIÓN RSVP -->
-      <div id="rsvp" class="subseccion">
-        <h3>RSVP</h3>
-        <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
-        <p>Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
-        <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar. La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
-
-        <p><strong>Mayores (por persona):</strong> $65.000</p>
-        <p><strong>Niñxs de 5 a 12 años:</strong> $35.000</p>
-        <p><strong>Niñxs de 0 a 4 años:</strong> invitados de la casa ✨</p>
-
-        <p>Podés hacerlo a través del QR o del alias que dejamos acá posterior al registro para confirmar tu asistencia:</p>
-
-        <div style="margin: 2rem 0;">
-          <img src="qr.png" alt="Código QR para transferencia" />
-        </div>
-
-        <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
-
-        <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
-          <label for="nombre">Nombre y Apellido:</label><br>
-          <input type="text" id="nombre" name="nombre" required><br>
-
-          <label for="dni">DNI:</label><br>
-          <input type="text" id="dni" name="dni" required><br>
-
-          <label for="dieta">Dieta:</label><br>
-          <select id="dieta" name="dieta" required>
-            <option value="">Seleccionar</option>
-            <option value="Común">Común</option>
-            <option value="Vegetarianx">Vegetarianx</option>
-            <option value="Veganx">Veganx</option>
-            <option value="Celiacx">Celiacx</option>
-          </select><br>
-
-          <button type="submit">Enviar</button>
-        </form>
-
-        <div id="confirmacion">
-          <img src="Comp 1.gif" alt="Confirmación visual" />
-        </div>
-      </div>
-
     </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp">
+    <h2 class="detalles-titulo">RSVP</h2>
+    <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
+    <p>Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
+    <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar.</p>
+    <p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados ✨</p>
+    <img src="qr.png" alt="Código QR" style="max-width:200px;">
+    <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
+    <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
+      <label for="nombre">Nombre y Apellido:</label><br>
+      <input type="text" id="nombre" name="nombre" required><br>
+      <label for="dni">DNI:</label><br>
+      <input type="text" id="dni" name="dni" required><br>
+      <label for="dieta">Dieta:</label><br>
+      <select id="dieta" name="dieta" required>
+        <option value="">Seleccionar</option>
+        <option value="Común">Común</option>
+        <option value="Vegetarianx">Vegetarianx</option>
+        <option value="Veganx">Veganx</option>
+        <option value="Celiacx">Celiacx</option>
+      </select><br>
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="confirmacion">
+      <img src="Comp 1.gif" alt="Confirmación visual" />
+    </div>
+  </section>
+
+  <!-- DUDAS -->
+  <section id="dudas">
+    <h2>Dudas?</h2>
+    <p>Si te quedaste con alguna duda o necesitás ayuda, ¡escribinos!</p>
+    <p><strong>Iara:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a></p>
+    <p><strong>Imanol:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a></p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <h2>Dudas?</h2>
-    <p style="font-size: 1rem; margin-bottom: 1.5rem;">
-      Si te quedaste con alguna duda o necesitás ayuda para completar los datos del registro, ¡escribinos!
-    </p>
-    <p style="font-size: 1rem; margin-bottom: 0.5rem;">
-      <strong>Iara:</strong>
-      <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
-        Whatsapp
-      </a>
-    </p>
-    <p style="font-size: 1rem;">
-      <strong>Imanol:</strong>
-      <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
-        Whatsapp
-      </a>
-    </p>
+    <p>Con todo nuestro amor, Iara & Imanol ✨</p>
   </footer>
 
   <!-- SCRIPTS -->
@@ -397,48 +384,28 @@
       const inicio = new Date("2024-12-21T00:00:00");
       const ahora = new Date();
       const diferencia = ahora - inicio;
-
       const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
       const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
       const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-
       document.getElementById("contador").textContent = `${dias} días, ${horas} horas y ${minutos} minutos`;
     }
-
     actualizarContador();
     setInterval(actualizarContador, 60000);
 
     function mostrarConfirmacion(event) {
       event.preventDefault();
-
       const form = document.getElementById("registro-form");
       const confirmacion = document.getElementById("confirmacion");
-
       const formData = new FormData(form);
-      fetch(form.action, {
-        method: "POST",
-        body: formData
-      }).then(() => {
+      fetch(form.action, { method: "POST", body: formData }).then(() => {
         form.style.display = "none";
         confirmacion.style.display = "block";
-
-        setTimeout(() => {
-          window.location.href = "#inicio";
-        }, 10000);
+        setTimeout(() => { window.location.href = "#inicio"; }, 10000);
       }).catch(error => {
         alert("Hubo un error al enviar el formulario. Intentá nuevamente.");
         console.error(error);
       });
     }
-
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      if (window.scrollY > 20) {
-        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.2)';
-      } else {
-        header.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.1)';
-      }
-    });
   </script>
 </body>
 </html>
