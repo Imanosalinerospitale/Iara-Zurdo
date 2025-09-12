@@ -161,7 +161,7 @@
     
     .donde-contenido {
       display: flex;
-      align-items: center;
+      align-items: center; /* centra verticalmente */
       justify-content: space-between;
       gap: 2rem;
       max-width: 1000px;
@@ -170,18 +170,11 @@
     }
 
     .donde-texto {
-      flex: 0 0 40%;
-    }
-
-    .donde-mapa {
       flex: 0 0 50%;
     }
 
-    .donde-mapa iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 350px;
-      border-radius: 8px;
+    .donde-mapa {
+      flex: 0 0 45%;
     }
 
     @media (max-width: 768px) {
@@ -190,14 +183,11 @@
         text-align: center;
       }
 
-      .donde-texto {
-        flex: 1 1 auto;
-      }
-
-      .donde-mapa {
+      .donde-texto, .donde-mapa {
         flex: 1 1 auto;
       }
     }
+
     
     .subtitulo-donde {
       font-family: 'Montserrat', sans-serif;
@@ -410,7 +400,9 @@
   </section>
 
  <!-- DÓNDE -->
-  <section id="donde">
+ <section id="donde">
+  <div class="contenido donde-contenido">
+    <!-- Columna izquierda: texto -->
     <div class="donde-texto">
       <h2 class="detalles-titulo">Dónde?</h2>
 
@@ -419,25 +411,26 @@
 
       <h3 class="subtitulo-donde">Transporte</h3>
       <p>El salón cuenta con estacionamiento propio.<br>
-        Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el <a href="#rsvp">formulario de RSVP</a>.</p>
-      
+      Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el <a href="#rsvp">formulario de RSVP</a>.</p>
+
       <h3 class="subtitulo-donde">Dresscode</h3>
       <p>Semi-formal, indie formal.</p>
     </div>
 
-      <div class="donde-mapa">
-        <iframe
-          src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-          width="100%"
-          height="400"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+    <!-- Columna derecha: mapa -->
+    <div class="donde-mapa">
+      <iframe
+        src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
-  </section>
+  </div>
+</section>
   
   <!-- RSVP -->
   <section id="rsvp">
@@ -506,8 +499,8 @@
         <p>Alias: XXXXX.XXXX.XXX</p>
         <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
       </div>
-    </div>
-  </div>
+    </div> 
+  </div> 
 </section>
 
   <!-- AVISO DE CONFIRMACIÓN -->
@@ -558,4 +551,5 @@
   </script>
 </body>
 </html>
+
 
