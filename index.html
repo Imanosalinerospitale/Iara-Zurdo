@@ -235,11 +235,6 @@
         flex: 1 1 auto;
       }
     }
-    
-    #dudas {
-      background-color: #f3b0b8;
-      color: #f6f4ef;
-    }
 
     #cuando p,
     #donde p,
@@ -284,14 +279,18 @@
 
     /* SECCIÓN AVISO CONFIRMACIÓN */
     #aviso-confirmacion {
-      background-color: #BE1823;
-      color: f6f4ef;
+      background-color: #f3b0b8;
+      color: #BE1823;
       text-align: center;
-      padding: 3vh 2vw;
-      font-size: 1.4rem;
-      font-weight: bold;
+      padding: 1vh 2vw;
+      font-size: 1.5rem;
     }
 
+    #dudas {
+      background-color: #BE1823;
+      color: #f6f4ef;
+    }
+    
     /* FOOTER */
     footer {
       background-color: #f6f4ef;
@@ -425,6 +424,13 @@
             <option value="Celiacx">Celiacx</option>
           </select><br>
 
+          <label for="asistencia">Estás interesadx en un servicio de transporte desde Córdoba Capital?</label><br>
+          <select id="transporte" name="transporte" required>
+            <option value="">Seleccionar</option>
+            <option value="Sí">Sí</option>
+            <option value="No">No</option>
+          </select><br>
+            
         <label for="mensaje">Mensaje para los novios:</label><br>
         <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribí unas palabras..."></textarea><br>
 
@@ -444,8 +450,8 @@
           <p>La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.<br>
           <strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados</p>
         <img src="qr.png" alt="Código QR" style="max-width:200px;">
-        <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
-        <p>Gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
+        <p>Alias: XXXXX.XXXX.XXX</p>
+        <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
       </div>
     </div>
   </div>
@@ -453,7 +459,7 @@
 
   <!-- AVISO DE CONFIRMACIÓN -->
   <section id="aviso-confirmacion">
-    <p><strong>POR FAVOR, CONFIRMAR ASISTENCIA ANTES DEL 16 DE DICIEMBRE</strong></p>
+    <p>Por favor, confirmar asistencia antes de <strong>10 de diciembre</strong>.</p>
   </section>
 
   <!-- DUDAS -->
@@ -499,6 +505,7 @@
   </script>
 </body>
 </html>
+
 
 
 
