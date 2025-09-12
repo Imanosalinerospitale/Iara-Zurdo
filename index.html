@@ -22,7 +22,7 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #F8F9FC;
       color: #111;
-      font-size: 18px;
+      font-size: 20px;
       overflow-x: hidden;
     }
     
@@ -199,6 +199,16 @@
       }
     }
     
+    .subtitulo-donde {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #111;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: left; /* mantiene la alineación con el párrafo */
+    }
+
     #rsvp {
       background-color: #f3b0b8; 
       color: #111;
@@ -260,10 +270,10 @@
       width: 100%;              /* ocupan el ancho completo */
       max-width: 500px;         /* largo máximo, podés ajustarlo */
       box-sizing: border-box;   /* incluye padding y borde en el cálculo */
-      padding: 0.8rem;
+      padding: 0.6rem;
       margin-bottom: 0rem;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 1000;
       color: #111;
       border: none;
@@ -273,7 +283,7 @@
 
     form select option {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
+      font-size: 0.9rem;
       font-weight: 400;
       color: #111;
     }
@@ -289,7 +299,7 @@
       font-size: 1.1rem;
       background-color: #BE1823;
       color: white;
-      padding: 0.8rem 1.6rem;
+      padding: 0.6rem 1.4rem;
       border: none;
       border-radius: 5px;
       transition: background-color 0.3s ease;
@@ -362,6 +372,7 @@
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#cuando">Información</a>
+    <a href="#rsvp">RSVP</a>
   </header>
 
   <!-- INICIO -->
@@ -400,15 +411,20 @@
 
  <!-- DÓNDE -->
   <section id="donde">
-    <div class="contenido donde-contenido">
-      <div class="donde-texto">
-        <h2 class="detalles-titulo">Dónde?</h2>
-        <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong> (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
-        <p>El salón cuenta con estacionamiento propio.<br>
-        Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el formulario de RSVP.</p>
-        <p>Dresscode recomendado:<br>semi-formal, indie formal.</p>
-        
-      </div>
+    <div class="donde-texto">
+      <h2 class="detalles-titulo">Dónde?</h2>
+
+      <h3 class="subtitulo-donde">El lugar</h3>
+      <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong> (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
+
+      <h3 class="subtitulo-donde">Transporte</h3>
+      <p>El salón cuenta con estacionamiento propio.<br>
+        Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el <a href="#rsvp">formulario de RSVP</a>.</p>
+      
+      <h3 class="subtitulo-donde">Dresscode</h3>
+      <p>Semi-formal, indie formal.</p>
+    </div>
+
       <div class="donde-mapa">
         <iframe
           src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
@@ -446,7 +462,7 @@
               <option value="No">No</option>
             </select><br>
 
-          <label for="acompanantes">Cuántos acompañantes llevás?</label><br>
+          <label for="acompanantes">Acompañantes?</label><br>
           <input type="number" id="acompanantes" name="acompanantes" min="0" value="0"><br>
 
           <label for="acompanantes">Nombre y apellido acompañante(s)</label><br>
@@ -469,7 +485,7 @@
           </select><br>
             
         <label for="mensaje">Mensaje para los novios:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribí unas palabras..."></textarea><br>
+        <textarea id="mensaje" name="mensaje" rows="2" placeholder="Escribí unas palabras..."></textarea><br>
 
         <button type="submit">Enviar</button>
       </form>
@@ -485,7 +501,7 @@
           Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.<br>
           Debido a nuestra situación, no necesitamos regalos materiales, lo único que queremos es poder volver a vivir en el mismo lugar.</p>
           <p>La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
-          <p<strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados</p>
+          <p></p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitadxs</p>
         <img src="qr.png" alt="Código QR" style="max-width:200px;">
         <p>Alias: XXXXX.XXXX.XXX</p>
         <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
@@ -542,25 +558,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
