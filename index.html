@@ -376,41 +376,46 @@
   
   <!-- RSVP -->
   <section id="rsvp">
-    <div class="contenido rsvp-contenido">
-      <!-- Columna izquierda: formulario -->
-      <div class="rsvp-form">
-        <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
-          <label for="nombre">Nombre y Apellido:</label><br>
-          <input type="text" id="nombre" name="nombre" required><br>
-          <label for="dni">DNI:</label><br>
-          <input type="text" id="dni" name="dni" required><br>
-          <label for="dieta">Dieta:</label><br>
-          <select id="dieta" name="dieta" required>
-            <option value="">Seleccionar</option>
-            <option value="Común">Común</option>
-            <option value="Vegetarianx">Vegetarianx</option>
-            <option value="Veganx">Veganx</option>
-            <option value="Celiacx">Celiacx</option>
-          </select><br>
-          <button type="submit">Enviar</button>
-        </form>
-        <div id="confirmacion">
-          <img src="Comp 1.gif" alt="Confirmación visual" />
-        </div>
-      </div>
+    <div class="contenido">
+      <!-- Título fuera de las columnas -->
+      <h2 class="detalles-titulo">RSVP</h2>
 
-      <!-- Columna derecha: texto -->
-      <div class="rsvp-texto">
-        <h2 class="detalles-titulo">RSVP</h2>
-        <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
-        <p>Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
-        <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar.</p>
-        <p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados ✨</p>
+      <div class="rsvp-contenido">
+        <!-- Columna izquierda: formulario -->
+        <div class="rsvp-form">
+          <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
+            <label for="nombre">Nombre y Apellido:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="dni">DNI:</label><br>
+            <input type="text" id="dni" name="dni" required><br>
+            <label for="dieta">Dieta:</label><br>
+            <select id="dieta" name="dieta" required>
+              <option value="">Seleccionar</option>
+              <option value="Común">Común</option>
+              <option value="Vegetarianx">Vegetarianx</option>
+              <option value="Veganx">Veganx</option>
+              <option value="Celiacx">Celiacx</option>
+            </select><br>
+            <button type="submit">Enviar</button>
+          </form>
+          <div id="confirmacion">
+            <img src="Comp 1.gif" alt="Confirmación visual" />
+          </div>
+        </div>
+
+        <!-- Columna derecha: texto -->
+        <div class="rsvp-texto">
+          <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.<br>
+          Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.<br>
+          Debido a nuestra situación, no necesitamos regalos materiales, lo único que queremos es poder volver a vivir en el mismo lugar.</p>
+          <p>La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad:<br>
+          <strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados ✨</p>
         <img src="qr.png" alt="Código QR" style="max-width:200px;">
         <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- DUDAS -->
   <section id="dudas">
@@ -455,6 +460,7 @@
   </script>
 </body>
 </html>
+
 
 
 
