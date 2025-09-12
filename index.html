@@ -25,7 +25,7 @@
       font-size: 18px;
       overflow-x: hidden;
     }
-
+    
     /* HEADER */
     header {
       position: fixed;
@@ -51,6 +51,14 @@
 
     header a:hover {
       color: #F5B1B8;
+    }
+
+    .subtitulo {
+      font-family: 'Cooper Black', serif;
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #BE1823;
     }
 
     /* CONTENEDORES */
@@ -142,7 +150,7 @@
 
     #cuando {
       background-color: #F5B1B8; 
-      color: black;
+      color: #fff;
     }
 
     #donde {
@@ -152,12 +160,12 @@
 
     #rsvp {
       background-color: #BE1823; 
-      color: #111;
+      color: #fff;
     }
 
     #dudas {
-      background-color: #BE1823;
-      color: white;
+      background-color: #F5B1B8;
+      color: #fff;
     }
 
     /* SECCIÓN SALÓN */
@@ -243,7 +251,7 @@
       background-color: #111;
       color: white;
       text-align: center;
-      padding: 6vh 5vw;
+      padding: 4vh 3vw;
     }
 
     footer h2 {
@@ -253,7 +261,8 @@
     }
 
     footer a {
-      color: white;
+      background-color: #fff;
+      color: #111;
       text-decoration: underline;
     }
 
@@ -271,10 +280,7 @@
   <header>
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
-    <a href="#cuando">Cuándo</a>
-    <a href="#donde">Dónde</a>
-    <a href="#rsvp">RSVP</a>
-    <a href="#dudas">Dudas</a>
+    <a href="#cuando">Información</a>
   </header>
 
   <!-- INICIO -->
@@ -314,10 +320,11 @@
   <!-- DÓNDE -->
   <section id="donde">
     <h2 class="detalles-titulo">¿Dónde?</h2>
+    <h3 class="subtitulo">Dresscode</h3> <!-- 👈 nuevo subtítulo -->
     <div class="contenido salon-contenido">
       <div class="salon-texto">
         <p>
-          Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. 
+          <strong>Las Mercedes – Casa de Campo</strong> es el lugar que elegimos para celebrar. 
           Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
           para compartir este momento con ustedes.
         </p>
@@ -335,6 +342,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- RSVP -->
   <section id="rsvp">
@@ -409,3 +417,4 @@
   </script>
 </body>
 </html>
+
