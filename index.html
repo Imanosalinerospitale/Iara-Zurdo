@@ -162,6 +162,46 @@
       color: #111;
     }
 
+    .donde-contenido {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left; /* para que el texto quede alineado */
+    }
+
+    .donde-texto {
+      flex: 0 0 40%;
+    }
+
+    .donde-mapa {
+      flex: 0 0 50%;
+    }
+
+    .donde-mapa iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .donde-contenido {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .donde-texto {
+        flex: 1 1 auto;
+      }
+
+      .donde-mapa {
+        flex: 1 1 auto;
+      }
+    }
+    
     #rsvp {
       background-color: #BE1823; 
       color: #fff;
@@ -284,19 +324,18 @@
     <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
   </section>
 
-  <!-- DÓNDE -->
+ <!-- DÓNDE -->
   <section id="donde">
-    <h2 class="detalles-titulo">¿Dónde?</h2>
-    <h3 class="subtitulo">Dresscode</h3> <!-- 👈 nuevo subtítulo -->
-    <div class="contenido salon-contenido">
-      <div class="salon-texto">
+    <div class="contenido donde-contenido">
+      <div class="donde-texto">
+        <h2 class="detalles-titulo">¿Dónde?</h2>
         <p>
           <strong>Las Mercedes – Casa de Campo</strong> es el lugar que elegimos para celebrar. 
           Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
           para compartir este momento con ustedes.
         </p>
       </div>
-      <div class="salon-mapa">
+      <div class="donde-mapa">
         <iframe
           src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
           width="100%"
@@ -309,6 +348,7 @@
       </div>
     </div>
   </section>
+
 
 
   <!-- RSVP -->
@@ -384,6 +424,7 @@
   </script>
 </body>
 </html>
+
 
 
 
