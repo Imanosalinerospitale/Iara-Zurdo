@@ -387,20 +387,40 @@
         <!-- Columna izquierda: formulario -->
         <div class="rsvp-form">
           <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
-            <label for="nombre">Nombre y Apellido:</label><br>
+            <label for="nombre">Nombre y apellido:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
+
             <label for="dni">DNI:</label><br>
             <input type="text" id="dni" name="dni" required><br>
-            <label for="dieta">Dieta:</label><br>
-            <select id="dieta" name="dieta" required>
+
+            <label for="asistencia">Vas a asistir?</label><br>
+            <select id="asistencia" name="asistencia" required>
               <option value="">Seleccionar</option>
-              <option value="Común">Común</option>
-              <option value="Vegetarianx">Vegetarianx</option>
-              <option value="Veganx">Veganx</option>
-              <option value="Celiacx">Celiacx</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
             </select><br>
-            <button type="submit">Enviar</button>
-          </form>
+
+          <label for="acompanantes">Cuántos acompañantes llevás?</label><br>
+          <input type="number" id="acompanantes" name="acompanantes" min="0" value="0"><br>
+
+          <label for="acompanantes">Nombre y apellido acompañante(s)</label><br>
+          <input type="text" id="nombreacomp" name="nombreacomp"><br>
+
+          <label for="dieta">Dieta:</label><br>
+          <select id="dieta" name="dieta" required>
+            <option value="">Seleccionar</option>
+            <option value="Común">Común</option>
+            <option value="Vegetarianx">Vegetarianx</option>
+            <option value="Veganx">Veganx</option>
+            <option value="Celiacx">Celiacx</option>
+          </select><br>
+
+        <label for="mensaje">Mensaje para los novios:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribí unas palabras..."></textarea><br>
+
+        <button type="submit">Enviar</button>
+      </form>
+          
           <div id="confirmacion">
             <img src="Comp 1.gif" alt="Confirmación visual" />
           </div>
@@ -464,6 +484,7 @@
   </script>
 </body>
 </html>
+
 
 
 
