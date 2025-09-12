@@ -102,7 +102,7 @@
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
-      margin-top: 0; /* 👈 elimina el espacio arriba */
+      margin-top: 0;
     }
 
     /* SECCIÓN NOSOTROS */
@@ -241,7 +241,10 @@
       margin: 0 auto;     /* centra el formulario */
     }
     
-    #cuando p,
+    #cuando p {
+      font-size: 1.5rem; 
+    }
+    
     #donde p,
     #rsvp p {
       font-size: 1.2rem; /* ajustá el valor a gusto */
@@ -251,12 +254,19 @@
     form input,
     form select,
     form textarea {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 1000;      /* negrita */
-      color: #111;           /* color del texto */
+      display: block;           /* cada uno en su fila */
+      width: 100%;              /* ocupan el ancho completo */
+      max-width: 500px;         /* largo máximo, podés ajustarlo */
+      box-sizing: border-box;   /* incluye padding y borde en el cálculo */
       padding: 0.8rem;
-      width: 100%; 
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #111;
+      border: 1px solid #ccc;   /* mismo borde para todos */
+      border-radius: 6px;
+      background-color: #fff;
     }
 
     form select option {
@@ -266,6 +276,12 @@
       color: #111;
     }
 
+    form select {
+      appearance: none;        /* elimina el estilo por defecto del sistema */
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    
     form button {
       font-family: 'Cooper Black', serif;
       font-size: 1.1rem;
@@ -385,7 +401,7 @@
     <div class="contenido donde-contenido">
       <div class="donde-texto">
         <h2 class="detalles-titulo">Dónde?</h2>
-        <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong>, (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
+        <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong> (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
         <p>El salón cuenta con estacionamiento propio.<br>
         Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el formulario de RSVP.</p>
         <p>Dresscode recomendado:<br>semi-formal, indie formal.</p>
@@ -466,8 +482,8 @@
           <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.<br>
           Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.<br>
           Debido a nuestra situación, no necesitamos regalos materiales, lo único que queremos es poder volver a vivir en el mismo lugar.</p>
-          <p>La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.<br>
-          <strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados</p>
+          <p>La tarjeta es la forma que encontramos de hacer posible esta fiesta y de ayudarnos a transformar ese deseo en realidad.</p>
+          <p<strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados</p>
         <img src="qr.png" alt="Código QR" style="max-width:200px;">
         <p>Alias: XXXXX.XXXX.XXX</p>
         <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
@@ -524,6 +540,7 @@
   </script>
 </body>
 </html>
+
 
 
 
