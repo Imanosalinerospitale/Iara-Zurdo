@@ -110,6 +110,7 @@
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
+      margin-top: 0; /* 👈 elimina el espacio arriba */
     }
 
     /* SECCIÓN NOSOTROS */
@@ -150,7 +151,7 @@
 
     #cuando {
       background-color: #F5B1B8; 
-      color: #BE1823;
+      color: #fff;
     }
 
     #cuando .detalles-titulo {
@@ -162,6 +163,10 @@
       color: #111;
     }
 
+    #donde .detalles-titulo {
+      color: #F5B1B8;
+    }
+    
     .donde-contenido {
       display: flex;
       align-items: flex-start;
@@ -169,7 +174,7 @@
       gap: 2rem;
       max-width: 1000px;
       margin: 0 auto;
-      text-align: left; /* para que el texto quede alineado */
+      text-align: justify;
     }
 
     .donde-texto {
@@ -424,6 +429,7 @@
   </script>
 </body>
 </html>
+
 
 
 
