@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara & Imanol</title>
   
-   <!-- Montserrat desde Google Fonts (NO BORRAR) -->
+  <!-- Montserrat desde Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
+    /* TIPOGRAFÍAS */
     @font-face {
       font-family: 'Cooper Black';
       src: url('CooperBlack.ttf') format('truetype');
@@ -25,6 +26,7 @@
       overflow-x: hidden;
     }
 
+    /* HEADER */
     header {
       position: fixed;
       top: 0;
@@ -51,6 +53,7 @@
       color: #F5B1B8;
     }
 
+    /* CONTENEDORES */
     .contenido {
       max-width: 1000px;
       margin: 0 auto;
@@ -62,6 +65,7 @@
       margin-top: 80px;
     }
 
+    /* TITULO PRINCIPAL */
     .titulo-central {
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 8vw, 6rem);
@@ -75,6 +79,7 @@
       animation: aparecer 1s ease-out forwards;
     }
 
+    /* GIF PRINCIPAL */
     .gif-fondo {
       width: 100%;
       max-height: 80vh;
@@ -92,22 +97,70 @@
       object-fit: contain;
     }
 
+    /* TITULOS SECCIONES */
     h2 {
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
       margin-bottom: 2rem;
     }
 
+    /* SECCIÓN NOSOTROS */
     section#nosotros {
       background-color: #BE1823;
       color: white;
     }
-    
+
+    #nosotros .contenido {
+      max-width: 1600px;
+    }
+
+    .imagen-intermedia {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+
+    .imagen-intermedia img {
+      width: 100%;        /* ocupa todo el ancho */
+      height: auto;
+      max-height: 600px;  /* opcional, límite de alto */
+      object-fit: cover;  /* recorta si es necesario */
+      display: block;
+    }
+
+    /* SECCIÓN DETALLES */
     section#detalles {
       background-color: #F5B1B8;
       color: white;
     }
 
+    .detalles-bloques {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto;
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .detalles-bloques {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bloque-detalle h3 {
+      font-family: 'Cooper Black', serif;
+      font-size: 1.5rem;
+      color: #BE1823;
+      margin-bottom: 1rem;
+    }
+
+    .bloque-detalle p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* SECCIÓN SALÓN */
     section#salon {
       background-color: #fff;
       color: #111;
@@ -117,32 +170,22 @@
       color: #BE1823;
     }
 
-    
-    section#registro {
-      background-color: #BE1823;
-      color: white;
-    }
-
-    section#registro h2 {
-      color: white;
-    }
-
     .salon-contenido {
       display: flex;
-      align-items: flex-start;   /* Alinea arriba */
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 2rem;                 /* Más espacio entre texto y mapa */
-      max-width: 1000px;         /* Ensancha el contenedor */
+      gap: 2rem;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     .salon-texto {
-      flex: 0 0 30%;             /* 40% del ancho */
+      flex: 0 0 30%;
       text-align: justify;
     }
 
     .salon-mapa {
-      flex: 0 0 50%;             /* 60% del ancho */
+      flex: 0 0 50%;
     }
 
     .salon-mapa iframe {
@@ -151,7 +194,6 @@
       border-radius: 8px;
     }
 
-    /* Vista móvil: que se pongan en columna */
     @media (max-width: 768px) {
       .salon-contenido {
         flex-direction: column;
@@ -170,40 +212,14 @@
       line-height: 1.6;
     }
 
-    .nosotros-contenido,
-    .registro-contenido {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      line-height: 1.6;
+    /* SECCIÓN REGISTRO */
+    section#registro {
+      background-color: #BE1823;
+      color: white;
     }
 
-    .detalles-bloques {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto auto;
-      gap: 2rem;
-    }
-
-    #nosotros .contenido {
-      max-width: 1600px;
-    }
-    
-    @media (max-width: 768px) {
-      .detalles-bloques {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .bloque-detalle h3 {
-      font-family: 'Cooper Black', serif;
-      font-size: 1.5rem;
-      color: #BE1823;
-      margin-bottom: 1rem;
-    }
-
-    .bloque-detalle p {
-      font-size: 1rem;
-      line-height: 1.4;
-      margin: 0;
+    section#registro h2 {
+      color: white;
     }
 
     form input,
@@ -240,6 +256,7 @@
       display: block;
     }
 
+    /* FOOTER */
     footer {
       background-color: #F5B1B8;
       color: white;
@@ -258,6 +275,7 @@
       text-decoration: underline;
     }
 
+    /* ANIMACIONES */
     @keyframes aparecer {
       to {
         opacity: 1;
@@ -267,6 +285,7 @@
   </style>
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a>
@@ -275,6 +294,7 @@
     <a href="#registro">Registro</a>
   </header>
 
+  <!-- INICIO -->
   <main id="inicio">
     <h1 class="titulo-central">IARA &<br>IMANOL</h1>
     <div class="gif-fondo">
@@ -282,6 +302,7 @@
     </div>
   </main>
 
+  <!-- SECCIÓN NOSOTROS -->
   <section id="nosotros">
     <div class="contenido">
       <h2>Nuestra historia</h2>
@@ -291,14 +312,19 @@
           Nos conocimos, nos desconocimos y aprendimos a volver a conocernos.<br>
           Discutimos, pensamos juntos, nos desafiamos, y en el medio de todo eso, nos elegimos.<br>
           Decidimos casarnos, no por protocolo, sino porque queremos vivir juntos, donde sea.<br>
-          Y porque si la vida ya es un delirio, mejor armar una fiesta.<br>
-          <br>
+          Y porque si la vida ya es un delirio, mejor armar una fiesta.<br><br>
           ¿Y qué mejor que hacerlo con las personas que queremos?
         </p>
       </div>
     </div>
   </section>
+  
+  <!-- Imagen intermedia -->
+  <div class="imagen-intermedia">
+    <img src="Sin título-1.png" alt="Imagen separadora">
+  </div>
 
+  <!-- SECCIÓN DETALLES -->
   <section id="detalles">
     <div class="contenido">
       <h2>Detalles</h2>
@@ -323,30 +349,32 @@
     </div>
   </section>
 
+  <!-- SECCIÓN SALÓN -->
   <section id="salon">
-  <div class="contenido salon-contenido">
-    <div class="salon-texto">
-      <h2>El Salón</h2>
-      <p>
-        Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. 
-        Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
-        para compartir este momento con ustedes.
-      </p>
+    <div class="contenido salon-contenido">
+      <div class="salon-texto">
+        <h2>El Salón</h2>
+        <p>
+          Las Mercedes – Casa de Campo es el lugar que elegimos para celebrar. 
+          Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
+          para compartir este momento con ustedes.
+        </p>
+      </div>
+      <div class="salon-mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
-    <div class="salon-mapa">
-      <iframe
-        src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <!-- SECCIÓN REGISTRO -->
   <section id="registro">
     <div class="contenido">
       <h2>Registro</h2>
@@ -368,7 +396,7 @@
         <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
 
         <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)" style="margin-top: 3rem;">
-          <label for="nombre">Nombre completo:</label><br>
+          <label for="nombre">Nombre y Apellido:</label><br>
           <input type="text" id="nombre" name="nombre" required><br>
 
           <label for="dni">DNI:</label><br>
@@ -386,13 +414,14 @@
           <button type="submit">Enviar</button>
         </form>
 
-        <div id="confirmacion" style="display: none; background-color: white; padding: 4vh 0;">
-          <img src="Comp 1.gif" alt="Confirmación visual" style="max-width: 400px; width: 100%; height: auto; margin: 0 auto; display: block;" />
+        <div id="confirmacion">
+          <img src="Comp 1.gif" alt="Confirmación visual" />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <h2>Dudas?</h2>
     <p style="font-size: 1rem; margin-bottom: 1.5rem;">
@@ -401,17 +430,18 @@
     <p style="font-size: 1rem; margin-bottom: 0.5rem;">
       <strong>Iara:</strong>
       <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
-        Whatsapp!
+        Whatsapp
       </a>
     </p>
     <p style="font-size: 1rem;">
       <strong>Imanol:</strong>
       <a href="https://api.whatsapp.com/send/?phone=543516074183&text&type=phone_number&app_absent=0" target="_blank">
-        Whatsapp!
+        Whatsapp
       </a>
     </p>
   </footer>
 
+  <!-- SCRIPTS -->
   <script>
     function actualizarContador() {
       const inicio = new Date("2024-12-21T00:00:00");
@@ -462,12 +492,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
