@@ -53,14 +53,6 @@
       color: #f3b0b8;
     }
 
-    .subtitulo {
-      font-family: 'Cooper Black', serif;
-      font-size: clamp(1.2rem, 4vw, 1.8rem);
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      color: #be1e28;
-    }
-
     /* CONTENEDORES */
     .contenido {
       max-width: 1000px;
@@ -115,7 +107,7 @@
 
     /* SECCIÓN NOSOTROS */
     section#nosotros {
-      background-color: #be1e28;
+      background-color: #BE1823;
       color: white;
     }
 
@@ -150,12 +142,12 @@
     }
 
     #cuando {
-      background-color: #be1e28; 
+      background-color: #f3b0b8; 
       color: #f6f4ef;
     }
 
     #cuando .detalles-titulo {
-      color: #be1e28;
+      color: #BE1823;
     }
     
     #donde {
@@ -208,7 +200,7 @@
     }
     
     #rsvp {
-      background-color: #be1e28; 
+      background-color: #BE1823; 
       color: #f6f4ef;
     }
 
@@ -236,7 +228,7 @@
 
     form button {
       background-color: white;
-      color: #be1e28;
+      color: #BE1823;
       font-weight: bold;
       padding: 0.6rem 1.2rem;
       border: none;
@@ -261,9 +253,9 @@
     /* FOOTER */
     footer {
       background-color: #f6f4ef;
-      color: #be1e28;
+      color: #BE1823;
       text-align: center;
-      padding: 2vh 5vw;
+      padding: 1vh 2vw;
     }
 
     footer h2 {
@@ -325,19 +317,18 @@
 
   <!-- CUÁNDO -->
   <section id="cuando">
-    <h2 class="detalles-titulo">¿Cuándo?</h2>
-    <p>Sábado, 27 de Diciembre de 2025.<br>Ceremonia a las 19.30 hs.</p>
+    <h2 class="detalles-titulo">Cuándo?</h2>
+    <p>Sábado, <strong>27 de Diciembre de 2025.</strong><br>Ceremonia a las 19.30 hs.</p>
   </section>
 
  <!-- DÓNDE -->
   <section id="donde">
     <div class="contenido donde-contenido">
       <div class="donde-texto">
-        <h2 class="detalles-titulo">¿Dónde?</h2>
+        <h2 class="detalles-titulo">Dónde?</h2>
         <p>
-          <strong>Las Mercedes – Casa de Campo</strong> es el lugar que elegimos para celebrar. 
-          Rodeado de naturaleza, con espacios amplios y cálidos, es el escenario perfecto 
-          para compartir este momento con ustedes.
+          Elegimos <strong>Las Mercedes – Casa de Campo</strong> para celebrar rodeados de naturaleza.<br><br>
+          Dresscode recomendado: semi-formal, indie formal.
         </p>
       </div>
       <div class="donde-mapa">
@@ -353,64 +344,70 @@
       </div>
     </div>
   </section>
-
-
-
+  
   <!-- RSVP -->
   <section id="rsvp">
-    <h2 class="detalles-titulo">RSVP</h2>
-    <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
-    <p>Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
-    <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar.</p>
-    <p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados ✨</p>
-    <img src="qr.png" alt="Código QR" style="max-width:200px;">
-    <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
-    <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
-      <label for="nombre">Nombre y Apellido:</label><br>
-      <input type="text" id="nombre" name="nombre" required><br>
-      <label for="dni">DNI:</label><br>
-      <input type="text" id="dni" name="dni" required><br>
-      <label for="dieta">Dieta:</label><br>
-      <select id="dieta" name="dieta" required>
-        <option value="">Seleccionar</option>
-        <option value="Común">Común</option>
-        <option value="Vegetarianx">Vegetarianx</option>
-        <option value="Veganx">Veganx</option>
-        <option value="Celiacx">Celiacx</option>
-      </select><br>
-      <button type="submit">Enviar</button>
-    </form>
-    <div id="confirmacion">
-      <img src="Comp 1.gif" alt="Confirmación visual" />
+    <div class="contenido rsvp-contenido">
+      <!-- Columna izquierda: formulario -->
+      <div class="rsvp-form">
+        <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
+          <label for="nombre">Nombre y Apellido:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br>
+          <label for="dni">DNI:</label><br>
+          <input type="text" id="dni" name="dni" required><br>
+          <label for="dieta">Dieta:</label><br>
+          <select id="dieta" name="dieta" required>
+            <option value="">Seleccionar</option>
+            <option value="Común">Común</option>
+            <option value="Vegetarianx">Vegetarianx</option>
+            <option value="Veganx">Veganx</option>
+            <option value="Celiacx">Celiacx</option>
+          </select><br>
+          <button type="submit">Enviar</button>
+        </form>
+        <div id="confirmacion">
+          <img src="Comp 1.gif" alt="Confirmación visual" />
+        </div>
+      </div>
+
+      <!-- Columna derecha: texto -->
+      <div class="rsvp-texto">
+        <h2 class="detalles-titulo">RSVP</h2>
+        <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.</p>
+        <p>Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.</p>
+        <p>No necesitamos regalos materiales; lo único que queremos es poder volver a vivir en el mismo lugar.</p>
+        <p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitados ✨</p>
+        <img src="qr.png" alt="Código QR" style="max-width:200px;">
+        <p><strong>Alias:</strong> XXXXX.XXXX.XXX</p>
+      </div>
     </div>
   </section>
 
   <!-- DUDAS -->
   <section id="dudas">
     <h2>Dudas?</h2>
-    <p>Si te quedaste con alguna duda o necesitás ayuda, ¡escribinos!</p>
+    <p>Si tenes alguna duda o necesitás ayuda, escribinos!</p>
     <p><strong>Iara:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a></p>
     <p><strong>Imanol:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a></p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>Con todo nuestro amor, Iara & Imanol ✨</p>
+    <p>Con todo nuestro amor, <strong>Iara & Imanol</strong> ✨</p>
   </footer>
 
   <!-- SCRIPTS -->
   <script>
     function actualizarContador() {
-      const inicio = new Date("2024-12-21T00:00:00");
+      const inicio = new Date("2024-12-21T00:00:00"); // fecha de inicio
       const ahora = new Date();
       const diferencia = ahora - inicio;
       const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-      document.getElementById("contador").textContent = `${dias} días, ${horas} horas y ${minutos} minutos`;
+      document.getElementById("contador").textContent = `${dias} días`;
     }
+
     actualizarContador();
-    setInterval(actualizarContador, 60000);
+    setInterval(actualizarContador, 86400000); // actualizar solo 1 vez al día
 
     function mostrarConfirmacion(event) {
       event.preventDefault();
@@ -429,6 +426,7 @@
   </script>
 </body>
 </html>
+
 
 
 
