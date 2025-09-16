@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Iara & Imanol</title>
   
-  <!-- Desde Google Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* TIPOGRAFÍAS */
+    /* ==============================
+       TIPOGRAFÍAS
+    ============================== */
     @font-face {
       font-family: 'Cooper Black';
       src: url('CooperBlack.woff2') format('woff2'),
@@ -25,11 +27,13 @@
       background-color: #F8F9FC;
       color: #111;
       font-size: 20px;
-      overflow-x: hidden;
       font-weight: 500;
+      overflow-x: hidden;
     }
     
-    /* HEADER */
+    /* ==============================
+       HEADER
+    ============================== */
     header {
       position: fixed;
       top: 0;
@@ -40,7 +44,6 @@
       padding: 0.8rem;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     header a {
@@ -54,10 +57,11 @@
 
     header a:hover {
       color: #F8F9FC;
-      text-decoration: none;
     }
 
-    /* CONTENEDORES */
+    /* ==============================
+       CONTENEDORES
+    ============================== */
     .contenido {
       max-width: 1000px;
       margin: 0 auto;
@@ -66,24 +70,27 @@
     }
 
     main#inicio {
-      margin-top: 80px;
+      margin-top: 80px; /* compensar header fijo */
     }
 
-    /* TITULO PRINCIPAL */
+    /* ==============================
+       TÍTULO PRINCIPAL
+    ============================== */
     .titulo-central {
       font-family: 'Cooper Black', serif;
       font-size: clamp(4rem, 8vw, 5rem);
-      color: #be1e28;
+      color: #BE1823;
       text-align: center;
       line-height: 0.75;
-      margin-bottom: 0rem;
-      margin-top: 2vh;
+      margin: 2vh 0 0;
       opacity: 0;
       transform: translateY(20px);
       animation: aparecer 1s ease-out forwards;
     }
 
-    /* GIF PRINCIPAL */
+    /* ==============================
+       GIF PRINCIPAL
+    ============================== */
     .gif-fondo {
       width: 100%;
       max-height: 80vh;
@@ -101,41 +108,47 @@
       object-fit: contain;
     }
 
-    /* GIF CALENDARIO */
+    /* ==============================
+       GIF CALENDARIO
+    ============================== */
     .gif-calendario {
       width: 100%;
-      height: clamp(600px, 40vh, 700px); /* alto fijo y responsive */
+      height: clamp(600px, 40vh, 700px);
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      margin: 0;
+    }
+
+    .gif-calendario img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
     }
 
     @media (max-width: 768px) {
       .gif-calendario {
         height: 31vh;
-        max-height: none;
-    }
-
-    .gif-calendario img {
-        object-fit: cover; /* se adapta al alto */
+      }
+      .gif-calendario img {
         width: 100%;
         height: 100%;
       }
     }
 
-    /* TITULOS SECCIONES */
+    /* ==============================
+       TÍTULOS SECCIONES
+    ============================== */
     h2 {
       font-family: 'Cooper Black', serif;
       font-size: clamp(2rem, 6vw, 4rem);
-      margin-bottom: 2rem;
-      margin-top: 0;
+      margin: 0 0 2rem;
     }
 
-    
-    /* SECCIÓN NOSOTROS */
-    section#nosotros {
+    /* ==============================
+       SECCIÓN NOSOTROS
+    ============================== */
+    #nosotros {
       background-color: #BE1823;
       color: white;
     }
@@ -144,26 +157,29 @@
       max-width: 1600px;
     }
 
+    /* Imagen separadora */
     .imagen-intermedia {
       width: 100%;
       height: clamp(600px, 40vh, 700px);
-      overflow: hidden; /* oculta lo que sobresale */
+      overflow: hidden;
     }
 
     .imagen-intermedia img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* recorta lados si hace falta */
+      object-fit: cover;
       display: block;
     }
 
     @media (max-width: 768px) {
       .imagen-intermedia {
-        height: 40vh; /* 👈 más alto en mobile */
+        height: 40vh;
       }
     }
 
-    /* NUEVAS SECCIONES DETALLES */
+    /* ==============================
+       SECCIONES DETALLES
+    ============================== */
     section {
       padding: 6vh 5vw;
       text-align: center;
@@ -178,17 +194,10 @@
     #cuando {
       background-color: #f9cbd0; 
       color: #111;
-      padding-bottom: 0; /* 👈 saca espacio interno inferior */
-      margin-bottom: 0;  /* 👈 saca espacio externo inferior */
     }
 
     #cuando .detalles-titulo {
       color: #BE1823;
-    }
-
-    #cuando h2.detalles-titulo {
-      margin-bottom: 0;
-      padding-bottom: 0;
     }
 
     #donde {
@@ -202,7 +211,7 @@
     
     .donde-contenido {
       display: flex;
-      align-items: center; /* centra verticalmente */
+      align-items: center;
       justify-content: space-between;
       gap: 2rem;
       max-width: 1000px;
@@ -218,37 +227,22 @@
       flex: 0 0 50%;
     }
 
-    @media (max-width: 768px) {
-      .donde-contenido {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .donde-texto, .donde-mapa {
-        flex: 1 1 auto;
-      }
-    }
-
     .subtitulo-donde {
-      font-family: 'Quicksand', sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #f6f4ef;
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-      text-align: left; /* mantiene la alineación con el párrafo */
+      margin: 1.5rem 0 0.5rem;
+      text-align: left;
     }
 
     #rsvp {
       background-color: #f9cbd0; 
       color: #111;
-      padding-bottom: 0;
-      margin-bottom: 0;
     }
     
     #rsvp .detalles-titulo {
       color: #BE1823;
     }
+
     .rsvp-contenido {
       display: flex;
       align-items: flex-start;
@@ -267,59 +261,53 @@
       flex: 0 0 50%;
     }
 
+    /* ==============================
+       RESPONSIVE AJUSTES
+    ============================== */
     @media (max-width: 768px) {
+      /* Dónde */
+      .donde-contenido {
+        flex-direction: column;
+        text-align: center;
+      }
+      .donde-texto, .donde-mapa {
+        flex: 1 1 auto;
+      }
+      .subtitulo-donde {
+        text-align: center;
+      }
+
+      /* RSVP */
       .rsvp-contenido {
         flex-direction: column;
         text-align: center;
       }
-
-      .rsvp-form, .rsvp-texto {
-        flex: 1 1 auto;
-      }
+      .rsvp-texto { order: 1; }
+      .rsvp-form { order: 2; }
     }
 
-    .rsvp-form form {
-      max-width: 500px;   /* ancho máximo de la cajita */
-      margin: 0 auto;     /* centra el formulario */
-    }
-    
-    #cuando p {
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
-    }
-    
-    #donde p,
-    #rsvp p {
-      font-size: clamp(0.9rem, 2vw, 1.2rem);
-    }
-
-    /* SECCIÓN REGISTRO */
+    /* ==============================
+       FORMULARIO
+    ============================== */
     form input,
     form select,
     form textarea {
-      display: block;           /* cada uno en su fila */
-      width: 100%;              /* ocupan el ancho completo */
-      max-width: 500px;         /* largo máximo, podés ajustarlo */
-      box-sizing: border-box;   /* incluye padding y borde en el cálculo */
+      display: block;
+      width: 100%;
+      max-width: 500px;
       padding: 0.6rem;
-      margin-bottom: 0rem;
+      margin-bottom: 0.8rem;
       font-family: 'Quicksand', sans-serif;
       font-size: 0.9rem;
-      font-weight: 1000;
       color: #111;
       border: none;
       border-radius: 5px;
       background-color: #fff;
-    }
-
-    form select option {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #111;
+      box-sizing: border-box;
     }
 
     form select {
-      appearance: none;        /* elimina el estilo por defecto del sistema */
+      appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
     }
@@ -333,6 +321,7 @@
       border: none;
       border-radius: 5px;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
     form button:hover {
@@ -348,12 +337,13 @@
     #confirmacion img {
       max-width: 400px;
       width: 100%;
-      height: auto;
-      margin: 0 auto;
       display: block;
+      margin: 0 auto;
     }
 
-    /* SECCIÓN AVISO CONFIRMACIÓN */
+    /* ==============================
+       AVISO CONFIRMACIÓN
+    ============================== */
     #aviso-confirmacion {
       background-color: #f9cbd0;
       color: #BE1823;
@@ -362,12 +352,17 @@
       font-size: 1.5rem;
     }
 
+    /* ==============================
+       DUDAS
+    ============================== */
     #dudas {
       background-color: #BE1823;
       color: #f6f4ef;
     }
     
-    /* FOOTER */
+    /* ==============================
+       FOOTER
+    ============================== */
     footer {
       background-color: #f6f4ef;
       color: #BE1823;
@@ -377,12 +372,13 @@
     }
 
     footer a {
-      background-color: #f6f4ef;
       color: #111;
       text-decoration: underline;
     }
 
-    /* ANIMACIONES */
+    /* ==============================
+       ANIMACIONES
+    ============================== */
     @keyframes aparecer {
       to {
         opacity: 1;
@@ -407,8 +403,6 @@
       <img src="Comp 1.gif" alt="Animación de fondo" />
     </div>
   </main>
-
-    </main>
   
   <!-- SECCIÓN NOSOTROS -->
   <section id="nosotros">
@@ -433,126 +427,115 @@
   <!-- CUÁNDO -->
   <section id="cuando">
     <h2 class="detalles-titulo">Cuándo?</h2>
+    <div class="gif-calendario">
+      <img src="calendario.gif" alt="Calendario" />
+    </div>
   </section>
-
-  <!-- GIF CALENDARIO -->
-  <div class="gif-calendario">
-    <img src="calendario.gif" alt="Calendario" />
-  </div>
   
- <!-- DÓNDE -->
- <section id="donde">
-  <div class="contenido donde-contenido">
-    <!-- Columna izquierda: texto -->
-    <div class="donde-texto">
-      <h2 class="detalles-titulo">Dónde?</h2>
+  <!-- DÓNDE -->
+  <section id="donde">
+    <div class="contenido donde-contenido">
+      <div class="donde-texto">
+        <h2 class="detalles-titulo">Dónde?</h2>
 
-      <h3 class="subtitulo-donde">El lugar</h3>
-      <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong> (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
+        <h3 class="subtitulo-donde">El lugar</h3>
+        <p>Elegimos <strong>Las Mercedes – Casa de Campo</strong> (Unquillo, Córdoba) para celebrar rodeados de naturaleza.</p>
 
-      <h3 class="subtitulo-donde">Transporte</h3>
-      <p>El salón cuenta con estacionamiento propio.</p>
-      <p>Para facilitar el traslado, estamos organizando un servicio de transporte grupal ida y vuelta desde Córdoba Capital al evento (puntos de encuentro y precio a definir). Si estás interesadx, por favor responder en el <a href="#rsvp">formulario de RSVP</a>.</p>
+        <h3 class="subtitulo-donde">Transporte</h3>
+        <p>El salón cuenta con estacionamiento propio.</p>
+        <p>Estamos organizando transporte grupal ida y vuelta desde Córdoba Capital (puntos de encuentro y precio a definir). Si estás interesadx, por favor respondé en el <a href="#rsvp">formulario de RSVP</a>.</p>
+      </div>
 
-      <h3 class="subtitulo-donde">Dresscode</h3>
-      <p>Semi-formal, indie formal.</p>
+      <div class="donde-mapa">
+        <iframe
+          src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
-
-    <!-- Columna derecha: mapa -->
-    <div class="donde-mapa">
-      <iframe
-        src="https://www.google.com/maps?q=Las+Mercedes+470,+Unquillo,+Córdoba,+Argentina&output=embed"
-        width="100%"
-        height="400"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
+  </section>
   
   <!-- RSVP -->
   <section id="rsvp">
     <div class="contenido">
-      <!-- Título fuera de las columnas -->
       <h2 class="detalles-titulo">RSVP</h2>
-
       <div class="rsvp-contenido">
-        <!-- Columna izquierda: formulario -->
         <div class="rsvp-form">
           <form id="registro-form" action="https://script.google.com/macros/s/AKfycbzo4EvlBChGqdrq6oYayAFmzohWaBY5uiG2Txu-J59X7YdXAxIHnJmbjAmvYeTPByyJ/exec" method="post" onsubmit="mostrarConfirmacion(event)">
-            <label for="nombre">Nombre y apellido:</label><br>
-            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="nombre">Nombre y apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-            <label for="dni">DNI:</label><br>
-            <input type="text" id="dni" name="dni" required><br>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
 
-            <label for="asistencia">Vas a asistir?</label><br>
+            <label for="asistencia">Vas a asistir?</label>
             <select id="asistencia" name="asistencia" required>
               <option value="">Seleccionar</option>
               <option value="Sí">Sí</option>
               <option value="No">No</option>
-            </select><br>
+            </select>
 
-          <label for="acompanantes">Acompañantes?</label><br>
-          <input type="number" id="acompanantes" name="acompanantes" min="0" value="0"><br>
+            <label for="acompanantes">Acompañantes?</label>
+            <input type="number" id="acompanantes" name="acompanantes" min="0" value="0">
 
-          <label for="acompanantes">Nombre y apellido acompañante(s)</label><br>
-          <input type="text" id="nombreacomp" name="nombreacomp"><br>
+            <label for="nombreacomp">Nombre y apellido acompañante(s)</label>
+            <input type="text" id="nombreacomp" name="nombreacomp">
 
-          <label for="dieta">Dieta:</label><br>
-          <select id="dieta" name="dieta" required>
-            <option value="">Seleccionar</option>
-            <option value="Común">Común</option>
-            <option value="Vegetarianx">Vegetarianx</option>
-            <option value="Veganx">Veganx</option>
-            <option value="Celiacx">Celiacx</option>
-          </select><br>
+            <label for="dieta">Dieta:</label>
+            <select id="dieta" name="dieta" required>
+              <option value="">Seleccionar</option>
+              <option value="Común">Común</option>
+              <option value="Vegetarianx">Vegetarianx</option>
+              <option value="Veganx">Veganx</option>
+              <option value="Celiacx">Celiacx</option>
+            </select>
 
-          <label for="asistencia">Estás interesadx en un servicio de transporte desde Córdoba Capital?</label><br>
-          <select id="transporte" name="transporte" required>
-            <option value="">Seleccionar</option>
-            <option value="Sí">Sí</option>
-            <option value="No">No</option>
-          </select><br>
+            <label for="transporte">Interesadx en transporte desde Córdoba Capital?</label>
+            <select id="transporte" name="transporte" required>
+              <option value="">Seleccionar</option>
+              <option value="Sí">Sí</option>
+              <option value="No">No</option>
+            </select>
             
-        <label for="mensaje">Mensaje para los novios:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="2" placeholder="Escribí unas palabras..."></textarea><br>
+            <label for="mensaje">Mensaje para los novios:</label>
+            <textarea id="mensaje" name="mensaje" rows="2" placeholder="Escribí unas palabras..."></textarea>
 
-        <button type="submit">Enviar</button>
-      </form>
+            <button type="submit">Enviar</button>
+          </form>
           
           <div id="confirmacion">
             <img src="Comp 1.gif" alt="Confirmación visual" />
           </div>
         </div>
 
-        <!-- Columna derecha: texto -->
         <div class="rsvp-texto">
           <p>Hace <span id="contador"></span> que más de 12.952 km nos separan.<br>
           Para nosotros esto no es simplemente un casamiento: es la posibilidad y la apuesta a un futuro juntos.<br>
           Debido a nuestra situación, no necesitamos regalos materiales, lo único que queremos es poder volver a vivir en el mismo lugar y festejar este paso que estamos dando con ustedes.</p>
           <p>La tarjeta es la forma que encontramos de transformar ese deseo en realidad.</p>
-          <p></p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitadxs</p>
-        <img src="qr.png" alt="Código QR" style="max-width:200px;">
-        <p>Alias: XXXXX.XXXX.XXX</p>
-        <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
-      </div>
+          <p><strong>Mayores:</strong> $65.000 | <strong>Niñxs 5 a 12:</strong> $35.000 | <strong>0 a 4:</strong> invitadxs</p>
+          <img src="qr.png" alt="Código QR" style="max-width:200px;">
+          <p>Alias: XXXXX.XXXX.XXX</p>
+          <p>Muchas gracias por acompañarnos, por hacer este día posible y por acercarnos un poco más a nuestro sueño.</p>
+        </div>
+      </div> 
     </div> 
-  </div> 
-</section>
+  </section>
 
   <!-- AVISO DE CONFIRMACIÓN -->
   <section id="aviso-confirmacion">
-    <p>Por favor, confirmar asistencia antes de <strong>10 de diciembre</strong>.</p>
+    <p>Por favor, confirmar asistencia antes del <strong>10 de diciembre</strong>.</p>
   </section>
 
   <!-- DUDAS -->
   <section id="dudas">
     <h2>Dudas?</h2>
-    <p>Si tenes alguna duda o necesitás ayuda, escribinos!</p>
+    <p>Si tenés alguna duda o necesitás ayuda, escribinos:</p>
     <p><strong>Iara:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a><b>
     <strong>Imanol:</strong> <a href="https://api.whatsapp.com/send/?phone=543516074183" target="_blank">Whatsapp</a></p>
   </section>
@@ -592,17 +575,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
