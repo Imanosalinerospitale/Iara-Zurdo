@@ -26,6 +26,7 @@
       color: #111;
       font-size: 20px;
       overflow-x: hidden;
+      font-weight: 500;
     }
     
     /* HEADER */
@@ -52,7 +53,8 @@
     }
 
     header a:hover {
-      color: #f9cbd0;
+      color: #F8F9FC;
+      text-decoration: none;
     }
 
     /* CONTENEDORES */
@@ -102,7 +104,7 @@
     /* GIF CALENDARIO */
     .gif-calendario {
       width: 100%;
-      max-height: 60vh;
+      height: clamp(300px, 60vh, 600px); /* alto fijo y responsive */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -112,8 +114,9 @@
 
     .gif-calendario img {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover; /* 🔥 mantiene proporción aunque se recorte */
+      display: block;
     }
 
     /* TITULOS SECCIONES */
@@ -146,6 +149,12 @@
       height: 100%;
       object-fit: cover; /* recorta lados si hace falta */
       display: block;
+    }
+
+    @media (max-width: 768px) {
+      .imagen-intermedia {
+        height: 60vh; /* 👈 más alto en mobile */
+      }
     }
 
     /* NUEVAS SECCIONES DETALLES */
@@ -277,7 +286,7 @@
       font-size: clamp(0.9rem, 2vw, 1.2rem);
     }
 
-    /* SECCIÓN REGISTRO (se mantiene como formulario en RSVP) */
+    /* SECCIÓN REGISTRO */
     form input,
     form select,
     form textarea {
@@ -287,7 +296,7 @@
       box-sizing: border-box;   /* incluye padding y borde en el cálculo */
       padding: 0.6rem;
       margin-bottom: 0rem;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       font-size: 0.9rem;
       font-weight: 1000;
       color: #111;
@@ -297,7 +306,7 @@
     }
 
     form select option {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       font-size: 0.9rem;
       font-weight: 400;
       color: #111;
@@ -357,13 +366,8 @@
       background-color: #f6f4ef;
       color: #BE1823;
       text-align: center;
-      padding: 1vh 2vw;
-    }
-
-    footer h2 {
-      font-family: 'Cooper Black', serif;
-      font-size: clamp(1.5rem, 5vw, 2.5rem);
-      margin-bottom: 1rem;
+      padding: 0.8vh 1.2vw;
+      font-size: clamp(0.8rem, 2vw, 1rem);
     }
 
     footer a {
@@ -549,7 +553,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>Con todo nuestro amor, <br><strong>Iara & Imanol</strong></p>
+    <p>Página diseñada por 123iamela & Surdito Bagre, <b>con todo nuestro amor.</p>
   </footer>
 
   <!-- SCRIPTS -->
@@ -582,21 +586,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
