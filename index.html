@@ -6,7 +6,7 @@
   <title>Iara & Imanol</title>
   
   <!-- Desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
     /* TIPOGRAFÍAS */
@@ -21,13 +21,14 @@
 
     body {
       margin: 0;
-      font-family: 'Quicksand', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background-color: #F8F9FC;
       color: #111;
       font-size: 20px;
+      letter-spacing: -0.5px; /* 🔹 ajusta este valor para acercar letras */
       overflow-x: hidden;
     }
-
+    
     /* HEADER */
     header {
       position: fixed;
@@ -99,6 +100,23 @@
       object-fit: contain;
     }
 
+    /* GIF CALENDARIO */
+    .gif-calendario {
+      width: 100%;
+      max-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin: 2rem 0; /* espacio arriba y abajo */
+    } 
+
+    .gif-calendario img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
     /* TITULOS SECCIONES */
     h2 {
       font-family: 'Cooper Black', serif;
@@ -107,6 +125,7 @@
       margin-top: 0;
     }
 
+    
     /* SECCIÓN NOSOTROS */
     section#nosotros {
       background-color: #BE1823;
@@ -373,6 +392,12 @@
     </div>
   </main>
 
+    </main>
+
+  <!-- GIF CALENDARIO -->
+  <div class="gif-calendario">
+    <img src="calendario.gif" alt="Calendario" />
+
   <!-- SECCIÓN NOSOTROS -->
   <section id="nosotros">
     <div class="contenido">
@@ -551,6 +576,7 @@
   </script>
 </body>
 </html>
+
 
 
 
