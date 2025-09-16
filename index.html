@@ -109,15 +109,22 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      margin: 0; /* 👈 sin espacio */
+      margin: 0;
     }
 
-    .gif-calendario img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* 🔥 mantiene proporción aunque se recorte */
-      display: block;
+    @media (max-width: 768px) {
+      .gif-fondo {
+        height: 50vh;   /* ocupa casi toda la pantalla */
+        max-height: none; /* anula el límite anterior */
     }
+
+    .gif-fondo img {
+        object-fit: cover; /* se adapta al alto */
+        width: 100%;
+        height: 100%;
+      }
+    }
+
 
     /* TITULOS SECCIONES */
     h2 {
@@ -153,7 +160,7 @@
 
     @media (max-width: 768px) {
       .imagen-intermedia {
-        height: 30vh; /* 👈 más alto en mobile */
+        height: 40vh; /* 👈 más alto en mobile */
       }
     }
 
@@ -172,7 +179,7 @@
     #cuando {
       background-color: #f9cbd0; 
       color: #111;
-      padding-bottom: 0; /* 👈 saca espacio interno inferior */
+      padding-bottom: 0.5; /* 👈 saca espacio interno inferior */
       margin-bottom: 0;  /* 👈 saca espacio externo inferior */
     }
 
@@ -586,6 +593,7 @@
   </script>
 </body>
 </html>
+
 
 
 
