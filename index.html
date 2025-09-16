@@ -6,7 +6,7 @@
   <title>Iara & Imanol</title>
   
   <!-- Desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     /* TIPOGRAFÍAS */
@@ -21,11 +21,10 @@
 
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Quicksand', sans-serif;
       background-color: #F8F9FC;
       color: #111;
       font-size: 20px;
-      letter-spacing: -0.5px; /* 🔹 ajusta este valor para acercar letras */
       overflow-x: hidden;
     }
     
@@ -108,8 +107,8 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      margin: 2rem 0; /* espacio arriba y abajo */
-    } 
+      margin: 0; /* 👈 sin espacio */
+    }
 
     .gif-calendario img {
       width: 100%;
@@ -164,6 +163,8 @@
     #cuando {
       background-color: #f3b0b8; 
       color: #111;
+      padding-bottom: 0; /* 👈 saca espacio interno inferior */
+      margin-bottom: 0;  /* 👈 saca espacio externo inferior */
     }
 
     #cuando .detalles-titulo {
@@ -393,12 +394,7 @@
   </main>
 
     </main>
-
-  <!-- GIF CALENDARIO -->
-  <div class="gif-calendario">
-    <img src="calendario.gif" alt="Calendario" />
-  </div>
-
+  
   <!-- SECCIÓN NOSOTROS -->
   <section id="nosotros">
     <div class="contenido">
@@ -422,9 +418,13 @@
   <!-- CUÁNDO -->
   <section id="cuando">
     <h2 class="detalles-titulo">Cuándo?</h2>
-    <p>Sábado, <strong>27 de Diciembre de 2025.</strong><br>Ceremonia a las 19.30 hs.</p>
   </section>
 
+  <!-- GIF CALENDARIO -->
+  <div class="gif-calendario">
+    <img src="calendario.gif" alt="Calendario" />
+  </div>
+  
  <!-- DÓNDE -->
  <section id="donde">
   <div class="contenido donde-contenido">
@@ -577,6 +577,7 @@
   </script>
 </body>
 </html>
+
 
 
 
